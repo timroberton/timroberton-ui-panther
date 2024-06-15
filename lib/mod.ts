@@ -9,3 +9,4 @@ export * from "./frames";
 export * from "./input";
 export * from "./select";
 export * from "./slider";
+export * from "@jsr/timroberton__panther";
