@@ -46,7 +46,7 @@ function updateChart(
   chartInputs: TimChartInputs,
   fixedCanvasW: number,
   domW: number,
-  domH: number,
+  domH: number
 ) {
   requestAnimationFrame(() => {
     if (domW === 0) {
