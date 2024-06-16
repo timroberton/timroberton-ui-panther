@@ -3,7 +3,7 @@ import { Show } from "solid-js";
 export function Select(p) {
     const selectedValue = () => p.options.find((so) => so.value === p.value);
     const onChangeHandler = (so) => so !== null && p.onChange(so.value);
-    return (<KSelect value={selectedValue()} onChange={onChangeHandler} options={p.options} optionValue="value" optionTextValue="label" placeholder={p.placeholder ?? "Unselected"} class="inline-flex w-[200px] flex-col align-middle text-base-content data-[width=true]:w-full" data-width={p.fullWidth} itemComponent={(props) => (<KSelect.Item item={props.item} class="ui-select-item">
+    return (<KSelect value={selectedValue()} onChange={onChangeHandler} options={p.options} optionValue="value" optionTextValue="label" placeholder={p.placeholder ?? "Unselected"} class="inline-flex w-[200px] flex-col align-middle text-base-content data-[width=true]:w-full" data-width={p.fullWidth} itemComponent={(props) => (<KSelect.Item item={props.item} class="ui-never-focusable ui-hoverable flex cursor-pointer select-none items-center justify-between rounded bg-base-100 py-2 pl-4 pr-4 text-base font-400 focus-visible:bg-base-200">
           <KSelect.ItemLabel class="truncate pr-2">
             {props.item.rawValue.label}
           </KSelect.ItemLabel>
@@ -21,7 +21,7 @@ export function Select(p) {
             </KSelect.Label>);
         }}
       </Show>
-      <KSelect.Trigger aria-label="Fruit" class="ui-select-trigger">
+      <KSelect.Trigger aria-label="Fruit" class="ui-focusable inline-flex w-full select-none items-center justify-between rounded border border-base-300 bg-base-100 py-2 pl-4 pr-2 align-middle text-base font-400">
         <KSelect.Value class="truncate pr-2 ui-placeholder-shown:text-danger">
           {(state) => state.selectedOption().label}
         </KSelect.Value>

@@ -32,7 +32,7 @@ export function Input(p: Props) {
         }}
       </Show>
       <KInput.Input
-        class="ui-input"
+        class="ui-focusable inline-flex w-full appearance-none rounded border border-base-300 bg-base-100 px-4 py-2 align-middle text-base text-base-content"
         data-intent={p.intent}
         autofocus={p.autofocus}
       />

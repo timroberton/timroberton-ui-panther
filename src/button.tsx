@@ -15,7 +15,7 @@ type Props = {
 export function Button(p: Props) {
   return (
     <KButton
-      class="ui-button"
+      class="ui-hoverable ui-disabled:ui-disabled ui-focusable inline-flex select-none appearance-none items-center justify-center whitespace-nowrap rounded border border-transparent bg-primary px-4 py-2 align-middle text-base font-400 text-primary-content data-neutral:bg-neutral data-neutral:text-neutral-content data-success:bg-success data-success:text-success-content data-danger:bg-danger data-danger:text-danger-content"
       onClick={p.onClick}
       type={p.type}
       disabled={p.disabled}

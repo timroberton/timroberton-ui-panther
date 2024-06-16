@@ -2023,7 +2023,7 @@ var Dialog = Object.assign(DialogRoot, {
 
 function Button(p) {
   return createComponent(Button$1, {
-    "class": "ui-button",
+    "class": "ui-hoverable ui-disabled:ui-disabled ui-focusable inline-flex select-none appearance-none items-center justify-center whitespace-nowrap rounded border border-transparent bg-primary px-4 py-2 align-middle text-base font-400 text-primary-content data-neutral:bg-neutral data-neutral:text-neutral-content data-success:bg-success data-success:text-success-content data-danger:bg-danger data-danger:text-danger-content",
     get onClick() {
       return p.onClick;
     },
@@ -2424,7 +2424,7 @@ function Input(p) {
           });
         }
       }), createComponent(TextField.Input, {
-        "class": "ui-input",
+        "class": "ui-focusable inline-flex w-full appearance-none rounded border border-base-300 bg-base-100 px-4 py-2 align-middle text-base text-base-content",
         get ["data-intent"]() {
           return p.intent;
         },
@@ -8088,7 +8088,7 @@ function Select(p) {
       get item() {
         return props.item;
       },
-      "class": "ui-select-item",
+      "class": "ui-never-focusable ui-hoverable flex cursor-pointer select-none items-center justify-between rounded bg-base-100 py-2 pl-4 pr-4 text-base font-400 focus-visible:bg-base-200",
       get children() {
         return [createComponent(Select$1.ItemLabel, {
           "class": "truncate pr-2",
@@ -8119,7 +8119,7 @@ function Select(p) {
         }
       }), createComponent(Select$1.Trigger, {
         "aria-label": "Fruit",
-        "class": "ui-select-trigger",
+        "class": "ui-focusable inline-flex w-full select-none items-center justify-between rounded border border-base-300 bg-base-100 py-2 pl-4 pr-2 align-middle text-base font-400",
         get children() {
           return [createComponent(Select$1.Value, {
             "class": "truncate pr-2 ui-placeholder-shown:text-danger",
