@@ -11,7 +11,8 @@
     "build": "rollup -c"
   },
   "files": [
-    "dist"
+    "dist",
+    ".npmrc"
   ],
   "publishConfig": {
     "@jsr:registry": "https://npm.jsr.io"

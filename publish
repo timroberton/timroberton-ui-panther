@@ -6,6 +6,9 @@ npm i
 # Make with rollup
 npm run build
 
+# Remove unnecessary types dir (after rollup second compile)
+rm -r dist/types
+
 # Commit to github
 today=`date +%Y_%m_%d_%H_%M_%S`
 git add . && \
