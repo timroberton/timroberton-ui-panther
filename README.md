@@ -1,15 +1,13 @@
-# To publish
+# Notes for Tim
+
+## To publish
 
 ```sh
-# Install deps
-npm i
+sh publish
+```
 
-# Make with rollup
-npm run build
+## To install
 
-# Commit to github
-today=`date +%Y_%m_%d_%H_%M_%S`
-git add . && \
-git commit -m "Update at $today" --allow-empty && \
-git push
+```sh
+npm i timroberton/timroberton-ui-panther#commit
 ```
