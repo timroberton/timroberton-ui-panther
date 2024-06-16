@@ -9,6 +9,7 @@
     "outDir": "dist",
     "skipLibCheck": true,
     "declaration": true,
+    "declarationDir": "./dist/esm",
   },
   "include": ["lib"],
   "exclude": [

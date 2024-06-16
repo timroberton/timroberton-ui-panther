@@ -10,12 +10,8 @@
     "build": "rollup -c"
   },
   "exports": {
-    ".": {
-      "solid": "./dist/source/mod.js",
-      "import": "./dist/esm/mod.js",
-      "browser": "./dist/esm/mod.js",
-      "types": "./dist/types/mod.d.ts"
-    }
+    "default": "./dist/esm/mod.js",
+    "types": "./dist/types/mod.d.ts"
   },
   "files": [
     "dist",
