@@ -1,11 +1,10 @@
 {
   "name": "@timroberton/ui-panther",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "",
-  "source": "src/mod.ts",
-  "main": "dist/esm/mod.js",
-  "module": "dist/esm/mod.js",
-  "types": "dist/esm/mod.d.ts",
+  "main": "dist/mod.js",
+  "module": "dist/mod.js",
+  "types": "dist/mod.d.ts",
   "type": "module",
   "scripts": {
     "build": "rollup -c"
