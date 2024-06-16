@@ -5,5 +5,12 @@
     "moduleResolution": "bundler",
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-  }
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "declaration": true,
+  },
+  "include": ["lib"],
+    "exclude": [
+      "node_modules"
+    ],
 }
