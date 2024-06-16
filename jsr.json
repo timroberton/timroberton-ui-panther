@@ -1,6 +1,6 @@
 {
   "name": "@timroberton/ui-panther",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "types": "dist/types/mod.d.ts",
   "exports": "./dist/esm/mod.js"
 }

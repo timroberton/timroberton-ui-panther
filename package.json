@@ -9,10 +9,6 @@
   "scripts": {
     "build": "rollup -c"
   },
-  "exports": {
-    "default": "./dist/esm/mod.js",
-    "types": "./dist/types/mod.d.ts"
-  },
   "files": [
     "dist",
     "lib/us.css"
