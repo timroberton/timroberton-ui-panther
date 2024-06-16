@@ -1,5 +1,0 @@
-{
-  "name": "@timroberton/ui-panther",
-  "version": "0.1.10",
-  "exports": "./dist/esm/mod.js"
-}
