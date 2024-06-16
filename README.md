@@ -11,3 +11,5 @@ sh publish
 ```sh
 npm i timroberton/timroberton-ui-panther#commit
 ```
+
+Copyright 2024, Tim Roberton, All rights reserved.
