@@ -13,6 +13,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "@jsr:registry": "https://npm.jsr.io"
+  },
   "dependencies": {
     "@jsr/timroberton__panther": "^0.1.3",
     "@kobalte/core": "^0.13.3",
