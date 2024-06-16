@@ -13,11 +13,13 @@
     ".": {
       "solid": "./dist/source/mod.js",
       "import": "./dist/esm/mod.js",
-      "browser": "./dist/esm/mod.js"
+      "browser": "./dist/esm/mod.js",
+      "types": "./dist/types/mod.d.ts"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "lib/us.css"
   ],
   "dependencies": {
     "@jsr/timroberton__panther": "^0.1.3",
