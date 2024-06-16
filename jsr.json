@@ -3,7 +3,7 @@
   "version": "0.1.5",
   "exports": "./dist/mod.js",
   "compilerOptions": {
-    "jsx": "preserve",
+    "jsx": "precompile",
     "jsxImportSource": "solid-js"
   }
 }
