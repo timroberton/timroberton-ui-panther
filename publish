@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Install deps
+rm -r node_modules
 npm i
 
 # Make with rollup
