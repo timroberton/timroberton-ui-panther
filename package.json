@@ -2,17 +2,32 @@
   "name": "timroberton-ui-panther",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/mod.js",
+  "main": "dist/esm/mod.js",
+  "module": "dist/esm/mod.js",
+  "types": "dist/types/mod.d.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
-  "author": "",
-  "license": "ISC",
+  "exports": {
+    ".": {
+      "solid": "./dist/source/mod.js",
+      "import": "./dist/esm/mod.js",
+      "browser": "./dist/esm/mod.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@jsr/timroberton__panther": "^0.1.3",
     "@kobalte/core": "^0.13.3",
     "@tweenjs/tween.js": "^23.1.2",
-    "solid-js": "^1.8.17",
+    "solid-js": "^1.8.17"
+  },
+  "devDependencies": {
+    "rollup": "^3.29.4",
+    "rollup-preset-solid": "^2.0.1",
     "typescript": "^5.4.5"
   }
 }

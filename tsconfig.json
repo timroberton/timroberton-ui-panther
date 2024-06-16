@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "moduleResolution": "bundler",
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
@@ -10,7 +11,7 @@
     "declaration": true,
   },
   "include": ["lib"],
-    "exclude": [
-      "node_modules"
-    ],
+  "exclude": [
+    "node_modules"
+  ],
 }
