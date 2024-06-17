@@ -1,7 +1,11 @@
 #!/bin/sh
 
-# Install deps
+# Remove all build files
+rm -r dist
 rm -r node_modules
+rm package-lock.json
+
+# Install deps
 npm i
 
 # Compile with tsc
