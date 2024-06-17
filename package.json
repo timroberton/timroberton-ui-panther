@@ -17,15 +17,12 @@
     "@jsr:registry": "https://npm.jsr.io"
   },
   "dependencies": {
-    "@jsr/timroberton__panther": "^0.1.4",
-    "@kobalte/core": "^0.13.3",
-    "@tweenjs/tween.js": "^23.1.2",
-    "solid-js": "^1.8.17"
+    "@jsr/timroberton__panther": "0.1.4",
+    "@kobalte/core": "0.13.3",
+    "@tweenjs/tween.js": "23.1.2",
+    "solid-js": "1.8.17"
   },
   "devDependencies": {
-    "rollup": "^3.29.4",
-    "rollup-plugin-dts": "^6.1.1",
-    "rollup-preset-solid": "^2.0.1",
-    "typescript": "^5.4.5"
+    "typescript": "5.4.5"
   }
 }
