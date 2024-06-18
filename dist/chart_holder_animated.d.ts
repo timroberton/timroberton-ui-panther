@@ -1,7 +1,7 @@
-import { RectCoordsDims, TimChartInputs } from "@jsr/timroberton__panther";
+import { RectCoordsDims, TimFigureInputs } from "@jsr/timroberton__panther";
 type Props<T extends Object> = {
-    getChartInputs: (obj: T) => TimChartInputs;
-    getChartRcd?: (obj: T) => RectCoordsDims;
+    getFigureInputs: (obj: T) => TimFigureInputs;
+    getFigureRcd?: (obj: T) => RectCoordsDims;
     obj: T;
     aspectRatio?: number;
 };

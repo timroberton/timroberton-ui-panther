@@ -1,6 +1,6 @@
+import { RectCoordsDims, renderFigure, } from "@jsr/timroberton__panther";
 import * as TWEEN from "@tweenjs/tween.js";
 import { createEffect } from "solid-js";
-import { RectCoordsDims, renderChart, } from "@jsr/timroberton__panther";
 export function ChartHolderAnimated(p) {
     let canvas;
     const fixedCanvasW = 4000;
@@ -9,9 +9,9 @@ export function ChartHolderAnimated(p) {
     function render(obj) {
         const ctx = canvas.getContext("2d");
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const rcd = p.getChartRcd?.(obj) ??
+        const rcd = p.getFigureRcd?.(obj) ??
             new RectCoordsDims([0, 0, canvas.width, canvas.height]);
-        renderChart(ctx, p.getChartInputs(obj), rcd);
+        renderFigure(ctx, p.getFigureInputs(obj), rcd, 1);
     }
     createEffect(() => {
         if (tween.isPlaying()) {
