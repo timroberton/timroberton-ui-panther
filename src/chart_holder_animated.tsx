@@ -1,14 +1,14 @@
-import * as TWEEN from "@tweenjs/tween.js";
-import { createEffect } from "solid-js";
 import {
   RectCoordsDims,
-  TimChartInputs,
-  renderChart,
+  TimFigureInputs,
+  renderFigure,
 } from "@jsr/timroberton__panther";
+import * as TWEEN from "@tweenjs/tween.js";
+import { createEffect } from "solid-js";
 
 type Props<T extends Object> = {
-  getChartInputs: (obj: T) => TimChartInputs;
-  getChartRcd?: (obj: T) => RectCoordsDims;
+  getFigureInputs: (obj: T) => TimFigureInputs;
+  getFigureRcd?: (obj: T) => RectCoordsDims;
   obj: T;
   aspectRatio?: number;
 };
@@ -25,9 +25,9 @@ export function ChartHolderAnimated<T extends Object>(p: Props<T>) {
     const ctx = canvas.getContext("2d")!;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const rcd =
-      p.getChartRcd?.(obj) ??
+      p.getFigureRcd?.(obj) ??
       new RectCoordsDims([0, 0, canvas.width, canvas.height]);
-    renderChart(ctx, p.getChartInputs(obj), rcd);
+    renderFigure(ctx, p.getFigureInputs(obj), rcd, 1);
   }
 
   createEffect(() => {

@@ -45,8 +45,8 @@ export function ContainerHorizontalVertival_300px(p: ContainerProps) {
 export function FrameSide(p: FrameProps) {
   return (
     <div class="flex h-full w-full">
-      <div class="h-full flex-none">{p.panelChildren}</div>
-      <div class="h-full w-0 flex-1">{p.children}</div>
+      <div class="h-full flex-none overflow-auto">{p.panelChildren}</div>
+      <div class="h-full w-0 flex-1 overflow-auto">{p.children}</div>
     </div>
   );
 }
@@ -58,10 +58,10 @@ export function FrameTop(p: FrameProps) {
     <div class="flex h-full w-full flex-col">
       <Show when={paneChildren()} keyed>
         {(panel) => {
-          return <div class="w-full flex-none">{panel}</div>;
+          return <div class="w-full flex-none overflow-auto">{panel}</div>;
         }}
       </Show>
-      <div class="h-0 w-full flex-1">{mainChildren()}</div>
+      <div class="h-0 w-full flex-1 overflow-auto">{mainChildren()}</div>
     </div>
   );
 }
@@ -74,11 +74,15 @@ export function FrameSideOrTop_Md(p: FrameProps) {
       <Show when={paneChildren()} keyed>
         {(panel) => {
           return (
-            <div class="w-full flex-none md:h-full md:w-auto">{panel}</div>
+            <div class="w-full flex-none md:h-full md:w-auto overflow-auto">
+              {panel}
+            </div>
           );
         }}
       </Show>
-      <div class="h-0 w-full flex-1 md:h-full md:w-0">{mainChildren()}</div>
+      <div class="h-0 w-full flex-1 md:h-full md:w-0 overflow-auto">
+        {mainChildren()}
+      </div>
     </div>
   );
 }
@@ -89,11 +93,15 @@ export function FrameSideOrTop_Lg(p: FrameProps) {
       <Show when={p.panelChildren} keyed>
         {(panel) => {
           return (
-            <div class="w-full flex-none lg:h-full lg:w-auto">{panel}</div>
+            <div class="w-full flex-none lg:h-full lg:w-auto overflow-auto">
+              {panel}
+            </div>
           );
         }}
       </Show>
-      <div class="h-0 w-full flex-1 lg:h-full lg:w-0">{p.children}</div>
+      <div class="h-0 w-full flex-1 lg:h-full lg:w-0 overflow-auto">
+        {p.children}
+      </div>
     </div>
   );
 }
@@ -104,11 +112,15 @@ export function FrameSideOrTop_Xl(p: FrameProps) {
       <Show when={p.panelChildren} keyed>
         {(panel) => {
           return (
-            <div class="w-full flex-none xl:h-full xl:w-auto">{panel}</div>
+            <div class="w-full flex-none xl:h-full xl:w-auto overflow-auto">
+              {panel}
+            </div>
           );
         }}
       </Show>
-      <div class="h-0 w-full flex-1 xl:h-full xl:w-0">{p.children}</div>
+      <div class="h-0 w-full flex-1 xl:h-full xl:w-0 overflow-auto">
+        {p.children}
+      </div>
     </div>
   );
 }
@@ -129,7 +141,7 @@ type Tab = {
 export function FrameSideMenu(p: FrameMenuProps) {
   return (
     <div class="flex h-full w-full">
-      <div class="h-full flex-none bg-base-content text-base-300">
+      <div class="h-full flex-none bg-base-content text-base-300 overflow-auto">
         <For each={p.tabs}>
           {(tab) => {
             return (
@@ -147,7 +159,7 @@ export function FrameSideMenu(p: FrameMenuProps) {
           }}
         </For>
       </div>
-      <div class="h-full w-0 flex-1">{p.children}</div>
+      <div class="h-full w-0 flex-1 overflow-auto">{p.children}</div>
     </div>
   );
 }
@@ -155,7 +167,7 @@ export function FrameSideMenu(p: FrameMenuProps) {
 export function FrameSideMenuSecondary(p: FrameMenuProps) {
   return (
     <div class="flex h-full w-full">
-      <div class="h-full flex-none space-y-3 bg-base-200 p-3 text-base-content-lighter">
+      <div class="h-full flex-none space-y-3 bg-base-200 p-3 text-base-content-lighter overflow-auto">
         <For each={p.tabs}>
           {(tab) => {
             return (
@@ -173,7 +185,7 @@ export function FrameSideMenuSecondary(p: FrameMenuProps) {
           }}
         </For>
       </div>
-      <div class="h-full w-0 flex-1">{p.children}</div>
+      <div class="h-full w-0 flex-1 overflow-auto">{p.children}</div>
     </div>
   );
 }
@@ -181,7 +193,7 @@ export function FrameSideMenuSecondary(p: FrameMenuProps) {
 export function FrameTopMenu(p: FrameMenuProps) {
   return (
     <div class="flex h-full w-full flex-col">
-      <div class="flex w-full flex-none bg-base-content-lighter text-base-300">
+      <div class="flex w-full flex-none bg-base-content-lighter text-base-300 overflow-auto">
         <For each={p.tabs}>
           {(tab) => {
             return (
@@ -216,7 +228,7 @@ export function FrameTopMenu(p: FrameMenuProps) {
           }}
         </For>
       </div>
-      <div class="h-0 w-full flex-1">{p.children}</div>
+      <div class="h-0 w-full flex-1 overflow-auto">{p.children}</div>
     </div>
   );
 }
