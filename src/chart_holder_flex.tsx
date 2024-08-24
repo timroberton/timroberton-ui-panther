@@ -1,9 +1,6 @@
-import {
-  RectCoordsDims,
-  TimChartInputs,
-  renderChart,
-} from "@jsr/timroberton__panther";
+import { RectCoordsDims, TimChartInputs, renderChart } from "./deps";
 import { createEffect, onMount } from "solid-js";
+import { fontsReady } from "./fonts_ready";
 
 type Props = {
   chartInputs: TimChartInputs;
@@ -16,6 +13,7 @@ export function ChartHolderFlex(p: Props) {
   const fixedCanvasW = 2000;
 
   createEffect(() => {
+    fontsReady();
     const domW = div.getBoundingClientRect().width;
     const domH = div.getBoundingClientRect().height;
     updateChart(canvas, p.chartInputs, fixedCanvasW, domW, domH);

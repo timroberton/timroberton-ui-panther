@@ -1,10 +1,7 @@
-import {
-  RectCoordsDims,
-  TimFigureInputs,
-  renderFigure,
-} from "@jsr/timroberton__panther";
+import { RectCoordsDims, TimFigureInputs, renderFigure } from "./deps";
 import * as TWEEN from "@tweenjs/tween.js";
 import { createEffect } from "solid-js";
+import { fontsReady } from "./fonts_ready";
 
 type Props<T extends Object> = {
   getFigureInputs: (obj: T) => TimFigureInputs;
@@ -31,6 +28,7 @@ export function ChartHolderAnimated<T extends Object>(p: Props<T>) {
   }
 
   createEffect(() => {
+    fontsReady();
     if (tween.isPlaying()) {
       tween.stop();
     }

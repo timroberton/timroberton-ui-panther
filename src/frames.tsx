@@ -172,7 +172,7 @@ export function FrameSideMenuSecondary(p: FrameMenuProps) {
           {(tab) => {
             return (
               <div
-                class={`cursor-pointer select-none rounded-full px-3 py-1.5 ${
+                class={`cursor-pointer select-none rounded px-3 py-1.5 ${
                   p.selected === tab.id
                     ? "bg-base-300 text-base-content"
                     : "ui-hoverable"

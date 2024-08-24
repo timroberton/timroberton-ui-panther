@@ -1,0 +1,11 @@
+import { type ColorKeyOrString } from "./deps.ts";
+export declare const _POINT_STYLES: PointStyle[];
+export type PointStyle = "circle" | "crossRot" | "rectRot" | "cross" | "rect" | "triangle";
+export declare function getPointStyle(pointStyles: PointStyle[], pointIndex: number): PointStyle;
+export declare function addPoint(ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D, pointStyle: PointStyle, x: number, y: number, radius: number, color: ColorKeyOrString, strokeWidth: number, innerColor: ColorKeyOrString): void;
+export declare function drawCircle(ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D, x: number, y: number, radius: number, fill: ColorKeyOrString, stroke: ColorKeyOrString, strokeWidth: number): void;
+export declare function drawCrossRot(ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D, x: number, y: number, radius: number, stroke: ColorKeyOrString, strokeWidth: number): void;
+export declare function drawRect(ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D, x: number, y: number, radius: number, fill: ColorKeyOrString, stroke: ColorKeyOrString, strokeWidth: number): void;
+export declare function drawCross(ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D, x: number, y: number, radius: number, stroke: ColorKeyOrString, strokeWidth: number): void;
+export declare function drawRectRot(ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D, x: number, y: number, radius: number, fill: ColorKeyOrString, stroke: ColorKeyOrString, strokeWidth: number): void;
+export declare function drawTriangle(ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D, x: number, y: number, radius: number, fill: ColorKeyOrString, stroke: ColorKeyOrString, strokeWidth: number): void;

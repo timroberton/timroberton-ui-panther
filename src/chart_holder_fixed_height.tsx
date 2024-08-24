@@ -1,9 +1,6 @@
 import { createEffect, onMount } from "solid-js";
-import {
-  RectCoordsDims,
-  TimChartInputs,
-  renderChart,
-} from "@jsr/timroberton__panther";
+import { RectCoordsDims, TimChartInputs, renderChart } from "./deps";
+import { fontsReady } from "./fonts_ready";
 
 type Props = {
   chartInputs: TimChartInputs;
@@ -17,6 +14,7 @@ export function ChartHolderFixedHeight(p: Props) {
   const fixedCanvasW = 4000;
 
   createEffect(() => {
+    fontsReady();
     const domW = div.getBoundingClientRect().width;
     updateChart(canvas, p.chartInputs, fixedCanvasW, domW, p.domH);
   });

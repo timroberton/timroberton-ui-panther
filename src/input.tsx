@@ -12,6 +12,7 @@ type Props = {
   intent?: Intent;
   autofocus?: boolean;
   fullWidth?: boolean;
+  type?: string;
 };
 
 export function Input(p: Props) {
@@ -35,6 +36,7 @@ export function Input(p: Props) {
         class="ui-focusable inline-flex w-full appearance-none rounded border border-base-300 bg-base-100 px-4 py-2 align-middle text-base text-base-content"
         data-intent={p.intent}
         autofocus={p.autofocus}
+        type={p.type}
       />
     </KInput>
   );
