@@ -43,10 +43,12 @@ export function ContainerHorizontalVertival_300px(p: ContainerProps) {
 }
 
 export function FrameSide(p: FrameProps) {
+  const paneChildren = children(() => p.panelChildren);
+  const mainChildren = children(() => p.children);
   return (
     <div class="flex h-full w-full">
-      <div class="h-full flex-none overflow-auto">{p.panelChildren}</div>
-      <div class="h-full w-0 flex-1 overflow-auto">{p.children}</div>
+      <div class="h-full flex-none overflow-auto">{paneChildren()}</div>
+      <div class="h-full w-0 flex-1 overflow-auto">{mainChildren()}</div>
     </div>
   );
 }

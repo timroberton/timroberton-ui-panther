@@ -17,11 +17,18 @@
     "@jsr:registry": "https://npm.jsr.io"
   },
   "dependencies": {
-    "@kobalte/core": "0.13.3",
+    "@kobalte/core": "^0.13.5",
     "@tweenjs/tween.js": "23.1.2",
     "solid-js": "1.8.17"
   },
   "devDependencies": {
     "typescript": "5.4.5"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "solid": "./index.ts",
+      "default": "./index.ts"
+    }
   }
 }

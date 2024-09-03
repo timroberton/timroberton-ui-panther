@@ -1,7 +1,7 @@
 // import { SupabaseClient } from "@supabase/supabase-js";
 import { createSignal, JSX, onMount, Show } from "solid-js";
 import { Button } from "./button";
-import { Input } from "./input";
+// import { Input } from "./input";
 
 type APIResponseWithData<T> =
   | { success: true; data: T }
@@ -188,7 +188,7 @@ function SignInForm(p: LoginPageFormPropsSignInRegister) {
         <div class="text-center">Signing in...</div>
       ) : (
         <>
-          <Input
+          {/* <Input
             label="Email"
             fullWidth
             type="email"
@@ -204,7 +204,7 @@ function SignInForm(p: LoginPageFormPropsSignInRegister) {
             // autocomplete="current-password"
             value={password()}
             onChange={setPassword}
-          />
+          /> */}
           <Button
             // class="w-full"
             fullWidth
@@ -296,7 +296,7 @@ function RegisterForm(p: LoginPageFormPropsSignInRegister) {
         <div class="text-center">Creating an account...</div>
       ) : (
         <>
-          <Input
+          {/* <Input
             label="Email"
             type="email"
             // autocomplete="email"
@@ -328,7 +328,7 @@ function RegisterForm(p: LoginPageFormPropsSignInRegister) {
             value={lastName()}
             onChange={setLastName}
             fullWidth
-          />
+          /> */}
           <Button type="submit" form="registerForm" onClick={submit} fullWidth>
             Create account
           </Button>
