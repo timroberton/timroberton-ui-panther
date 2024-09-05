@@ -1,14 +1,13 @@
-import { TextField as KInput, } from "@kobalte/core/text-field";
 import { Show } from "solid-js";
 export function Input(p) {
-    return (<KInput class="inline-flex w-[200px] flex-col align-middle data-[width=true]:w-full" value={p.value} data-width={p.fullWidth} onChange={p.onChange}>
+    return (<div class="w-[200px] data-[width=true]:w-full" data-width={p.fullWidth}>
       <Show when={p.label} keyed>
         {(keyedLabel) => {
-            return (<KInput.Label class="text-base-content" data-intent={p.intent}>
+            return (<label class="pb-1 text-sm text-base-content inline-block" data-intent={p.intent}>
               {keyedLabel}
-            </KInput.Label>);
+            </label>);
         }}
       </Show>
-      <KInput.Input class="ui-focusable inline-flex w-full appearance-none rounded border border-base-300 bg-base-100 px-4 py-2 align-middle text-base text-base-content" data-intent={p.intent} autofocus={p.autofocus} type={p.type}/>
-    </KInput>);
+      <input class="ui-focusable inline-flex w-full appearance-none rounded border border-base-300 bg-base-100 px-4 py-2 align-middle text-base text-base-content font-400" data-intent={p.intent} autofocus={p.autofocus} type={p.type} onChange={(v) => p.onChange(v.currentTarget.value)} value={p.value}/>
+    </div>);
 }

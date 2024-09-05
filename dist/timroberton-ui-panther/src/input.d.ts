@@ -1,8 +1,7 @@
-import { TextFieldRootOptions } from "@kobalte/core/text-field";
 import { Intent } from "./types";
 type Props = {
-    value: TextFieldRootOptions["value"];
-    onChange?: TextFieldRootOptions["onChange"];
+    value: string;
+    onChange?: (v: string) => void;
     label?: string;
     intent?: Intent;
     autofocus?: boolean;

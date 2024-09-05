@@ -1,6 +1,6 @@
 {
   "name": "@timroberton/ui-panther",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "",
   "main": "dist/mod.js",
   "module": "dist/mod.js",
@@ -17,8 +17,7 @@
     "@jsr:registry": "https://npm.jsr.io"
   },
   "dependencies": {
-    "@kobalte/core": "^0.13.5",
-    "@tweenjs/tween.js": "23.1.2",
+    "@jsr/timroberton__panther": "^0.1.17",
     "solid-js": "1.8.17"
   },
   "devDependencies": {

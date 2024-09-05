@@ -1,7 +1,6 @@
 // import { SupabaseClient } from "@supabase/supabase-js";
 import { createSignal, onMount, Show } from "solid-js";
 import { Button } from "./button";
-import { Input } from "./input";
 const [loggedInInfo, setLoggedInInfo] = createSignal(undefined);
 async function logout() {
     try {
@@ -118,12 +117,23 @@ function SignInForm(p) {
     return (<form id="signInForm" class="space-y-4">
       <FormHeader>Sign in to use the platform</FormHeader>
       {loading() ? (<div class="text-center">Signing in...</div>) : (<>
-          <Input label="Email" fullWidth type="email" 
-        // autocomplete="email"
-        value={email()} onChange={setEmail} autofocus/>
-          <Input label="Password" fullWidth type="password" 
-        // autocomplete="current-password"
-        value={password()} onChange={setPassword}/>
+          {/* <Input
+              label="Email"
+              fullWidth
+              type="email"
+              // autocomplete="email"
+              value={email()}
+              onChange={setEmail}
+              autofocus
+            />
+            <Input
+              label="Password"
+              fullWidth
+              type="password"
+              // autocomplete="current-password"
+              value={password()}
+              onChange={setPassword}
+            /> */}
           <Button 
         // class="w-full"
         fullWidth type="submit" form="signInForm" onClick={submit}>
@@ -198,18 +208,39 @@ function RegisterForm(p) {
     return (<form id="registerForm" class="space-y-4">
       <FormHeader>Create an account to use the platform</FormHeader>
       {loading() ? (<div class="text-center">Creating an account...</div>) : (<>
-          <Input label="Email" type="email" 
-        // autocomplete="email"
-        value={email()} onChange={setEmail} autofocus fullWidth/>
-          <Input label="Password" type="password" 
-        // autocomplete="new-password"
-        value={password()} onChange={setPassword} fullWidth/>
-          <Input label="First name" type="text" 
-        // autocomplete="given-name"
-        value={firstName()} onChange={setFirstName} fullWidth/>
-          <Input label="Last name" type="text" 
-        // autocomplete="family-name"
-        value={lastName()} onChange={setLastName} fullWidth/>
+          {/* <Input
+              label="Email"
+              type="email"
+              // autocomplete="email"
+              value={email()}
+              onChange={setEmail}
+              autofocus
+              fullWidth
+            />
+            <Input
+              label="Password"
+              type="password"
+              // autocomplete="new-password"
+              value={password()}
+              onChange={setPassword}
+              fullWidth
+            />
+            <Input
+              label="First name"
+              type="text"
+              // autocomplete="given-name"
+              value={firstName()}
+              onChange={setFirstName}
+              fullWidth
+            />
+            <Input
+              label="Last name"
+              type="text"
+              // autocomplete="family-name"
+              value={lastName()}
+              onChange={setLastName}
+              fullWidth
+            /> */}
           <Button type="submit" form="registerForm" onClick={submit} fullWidth>
             Create account
           </Button>
