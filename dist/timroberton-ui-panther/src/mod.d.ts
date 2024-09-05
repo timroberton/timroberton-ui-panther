@@ -11,4 +11,4 @@ export * from "./select";
 export * from "./label_holder";
 export * from "./loading_el";
 export * from "./state_holder_wrapper";
-export * from "@jsr/timroberton__panther";
+export * from "../../timroberton-panther/mod";

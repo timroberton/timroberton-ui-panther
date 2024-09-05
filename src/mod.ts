@@ -15,6 +15,6 @@ export * from "./label_holder";
 export * from "./loading_el";
 export * from "./state_holder_wrapper";
 // export * from "./slider";
-// export * from "../../timroberton-panther/mod";
-export * from "@jsr/timroberton__panther";
+export * from "../../timroberton-panther/mod";
+// export * from "@jsr/timroberton__panther";
 // export * as TWEEN from "@tweenjs/tween.js";
