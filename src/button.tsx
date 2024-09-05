@@ -1,14 +1,12 @@
-import { ButtonRootProps, Button as KButton } from "@kobalte/core/button";
-import { Link as KLink } from "@kobalte/core/link";
 import { JSX } from "solid-js";
 import { Intent } from "./types";
 
 type ButtonProps = {
   children: JSX.Element;
   onClick?: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent>;
-  type?: ButtonRootProps["type"];
+  type?: HTMLButtonElement["type"];
   form?: string;
-  disabled?: ButtonRootProps["disabled"];
+  disabled?: HTMLButtonElement["disabled"];
   autofocus?: boolean;
   intent?: Intent;
   fullWidth?: boolean;
@@ -16,7 +14,7 @@ type ButtonProps = {
 
 export function Button(p: ButtonProps) {
   return (
-    <KButton
+    <button
       class="ui-hoverable ui-disabled:ui-disabled ui-focusable inline-flex select-none appearance-none items-center justify-center whitespace-nowrap rounded border border-transparent bg-primary px-4 py-2 align-middle text-base font-400 text-primary-content data-neutral:bg-neutral data-neutral:text-neutral-content data-success:bg-success data-success:text-success-content data-danger:bg-danger data-danger:text-danger-content data-[width=true]:w-full"
       onClick={p.onClick}
       type={p.type}
@@ -27,7 +25,7 @@ export function Button(p: ButtonProps) {
       data-width={p.fullWidth}
     >
       {p.children}
-    </KButton>
+    </button>
   );
 }
 
@@ -36,19 +34,17 @@ type LinkProps = {
   href: string;
   intent?: Intent;
   fullWidth?: boolean;
-  disabled?: boolean;
 };
 
 export function Link(p: LinkProps) {
   return (
-    <KLink
+    <a
       class="ui-hoverable ui-disabled:ui-disabled ui-focusable inline-flex select-none appearance-none items-center justify-center whitespace-nowrap rounded border border-transparent bg-primary px-4 py-2 align-middle text-base font-400 text-primary-content data-neutral:bg-neutral data-neutral:text-neutral-content data-success:bg-success data-success:text-success-content data-danger:bg-danger data-danger:text-danger-content data-[width=true]:w-full"
       href={p.href}
-      disabled={p.disabled}
       data-intent={p.intent}
       data-width={p.fullWidth}
     >
       {p.children}
-    </KLink>
+    </a>
   );
 }

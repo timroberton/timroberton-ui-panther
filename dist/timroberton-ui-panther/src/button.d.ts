@@ -1,12 +1,11 @@
-import { ButtonRootProps } from "@kobalte/core/button";
 import { JSX } from "solid-js";
 import { Intent } from "./types";
 type ButtonProps = {
     children: JSX.Element;
     onClick?: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent>;
-    type?: ButtonRootProps["type"];
+    type?: HTMLButtonElement["type"];
     form?: string;
-    disabled?: ButtonRootProps["disabled"];
+    disabled?: HTMLButtonElement["disabled"];
     autofocus?: boolean;
     intent?: Intent;
     fullWidth?: boolean;
@@ -17,7 +16,6 @@ type LinkProps = {
     href: string;
     intent?: Intent;
     fullWidth?: boolean;
-    disabled?: boolean;
 };
 export declare function Link(p: LinkProps): JSX.Element;
 export {};
