@@ -1,4 +1,4 @@
-import { SegmentDirection, } from "./types.ts";
+import { SegmentDirection, } from "./types";
 export function addPathData(edges, edgeCoordMap, s) {
     edges.forEach((edge) => {
         const ew = s.strokeWidthForArrowCrop;

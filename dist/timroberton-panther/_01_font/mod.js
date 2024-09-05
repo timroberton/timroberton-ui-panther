@@ -1,3 +1,3 @@
-export { getFont, setKeyFonts } from "./key_fonts.ts";
-export { TIM_FONTS, TIM_FONT_SETS } from "./tim_fonts.ts";
-export { getAdjustedText, getFontInfoId, } from "./types.ts";
+export { getFont, setKeyFonts } from "./key_fonts";
+export { TIM_FONTS, TIM_FONT_SETS } from "./tim_fonts";
+export { getAdjustedText, getFontInfoId, } from "./types";

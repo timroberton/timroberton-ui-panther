@@ -1,4 +1,4 @@
-import type { ColorKeyOrString, LegendItem } from "../deps.ts";
+import type { ColorKeyOrString, LegendItem } from "../deps";
 export type TimChartDataSankey = {
     streams: SankeyStream[];
     cols: SankeyCol[];

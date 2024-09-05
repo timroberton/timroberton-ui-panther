@@ -1,15 +1,15 @@
-import { addConnectingNodes } from "./add_connecting_nodes.ts";
-import { addPathData } from "./add_path_data.ts";
-import { createBendsMap } from "./create_bends_map.ts";
-import { createColumnsAndUpdateTileCoordMap } from "./create_columns.ts";
-import { addAndSortNodeJoins, createEdgeCoordMap, createNodeCoordMap, createTileCoordMap, updateNodeCoordMapWithTrackMaps, updateNodeCoordMapWithYOffsets, } from "./create_node_coord_map.ts";
-import { _DEFAULT_POSITIONSTYLE } from "./default_style.ts";
-import { getModelBounds } from "./get_model_bounds.ts";
-import { sortSequencing } from "./sort_sequencing.ts";
-import { sortAndCollapseSegmentTracks, updateColumnsWithBreakInfo, updateColumnsWithEdgeConnections, updateColumnsWithSegmentsNormalAndAround, updateColumnsWithYOffsets, } from "./update_columns.ts";
-import { updateHorizontalPositions } from "./update_horizontal_positions.ts";
-import { updateTileCoords } from "./update_tile_coords.ts";
-import { updateVerticalPositions } from "./update_vertical_positions.ts";
+import { addConnectingNodes } from "./add_connecting_nodes";
+import { addPathData } from "./add_path_data";
+import { createBendsMap } from "./create_bends_map";
+import { createColumnsAndUpdateTileCoordMap } from "./create_columns";
+import { addAndSortNodeJoins, createEdgeCoordMap, createNodeCoordMap, createTileCoordMap, updateNodeCoordMapWithTrackMaps, updateNodeCoordMapWithYOffsets, } from "./create_node_coord_map";
+import { _DEFAULT_POSITIONSTYLE } from "./default_style";
+import { getModelBounds } from "./get_model_bounds";
+import { sortSequencing } from "./sort_sequencing";
+import { sortAndCollapseSegmentTracks, updateColumnsWithBreakInfo, updateColumnsWithEdgeConnections, updateColumnsWithSegmentsNormalAndAround, updateColumnsWithYOffsets, } from "./update_columns";
+import { updateHorizontalPositions } from "./update_horizontal_positions";
+import { updateTileCoords } from "./update_tile_coords";
+import { updateVerticalPositions } from "./update_vertical_positions";
 export function getPositionsSimple(m, customStyleProps) {
     const s = {
         ..._DEFAULT_POSITIONSTYLE,

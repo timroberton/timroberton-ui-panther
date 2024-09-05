@@ -1,6 +1,6 @@
-import type { ColorAdjustmentStrategy, ColorKeyOrString, Padding, PointStyle, TextInfoUnkeyed } from "./deps.ts";
-import type { CsvCellFormatterFunc, StyleFuncBoolean, StyleFuncColorKeyOrString, StyleFuncString, StyleFuncUpperLabel } from "./style_func_types.ts";
-import type { DataLabelPositionOffset, LegendItemsSource, LegendPosition, PaletteLogic } from "./types.ts";
+import type { ColorAdjustmentStrategy, ColorKeyOrString, Padding, PointStyle, TextInfoUnkeyed } from "./deps";
+import type { CsvCellFormatterFunc, StyleFuncBoolean, StyleFuncColorKeyOrString, StyleFuncString, StyleFuncUpperLabel } from "./style_func_types";
+import type { DataLabelPositionOffset, LegendItemsSource, LegendPosition, PaletteLogic } from "./types";
 export type MergedChartStyle = {
     alreadyScaledValue: number;
     text: {

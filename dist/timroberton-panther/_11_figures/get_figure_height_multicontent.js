@@ -1,6 +1,6 @@
-import { measureText, sum } from "./deps.ts";
-import { getFigureHeight } from "./get_figure_height.ts";
-import { getRowsOfSingleContent } from "./get_rows_of_single_content.ts";
+import { measureText, sum } from "./deps";
+import { getFigureHeight } from "./get_figure_height";
+import { getRowsOfSingleContent } from "./get_rows_of_single_content";
 export function getFigureHeightMultiContent(ctx, inputs, width, s, responsiveScale, canvasCreator) {
     const singleW = (width - (s.nPerRow - 1) * s.subChartGapX) / s.nPerRow;
     const rowsOfSingleContent = getRowsOfSingleContent(inputs.multiContent, s.nPerRow, s.nSlotsToSkip ?? 0);

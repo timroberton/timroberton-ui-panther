@@ -1,4 +1,4 @@
-import { Coordinates, measureLegend, measureText, } from "./deps.ts";
+import { Coordinates, measureLegend, measureText, } from "./deps";
 export function measureSurrounds(ctx, rcd, cs, caption, legendItems) {
     const sSurrounds = cs.getMergedSurroundsStyle();
     const innerRcd = rcd.getPadded(sSurrounds.padding);

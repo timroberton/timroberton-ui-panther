@@ -1,4 +1,4 @@
-import { measureLegend, measureText, } from "./deps.ts";
+import { measureLegend, measureText, } from "./deps";
 export function getSurroundsHeight(ctx, width, cs, caption, legendItems) {
     const sSurrounds = cs.getMergedSurroundsStyle();
     const innerW = width - sSurrounds.padding.totalPx();

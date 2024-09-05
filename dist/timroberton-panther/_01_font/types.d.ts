@@ -1,4 +1,4 @@
-import { type ColorKeyOrString } from "./deps.ts";
+import { type ColorKeyOrString } from "./deps";
 export type TextInfoUnkeyed = {
     font: FontInfo;
     fontSize: number;

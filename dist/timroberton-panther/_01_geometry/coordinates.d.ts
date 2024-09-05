@@ -1,4 +1,4 @@
-import type { CoordsOffset } from "./types.ts";
+import type { CoordsOffset } from "./types";
 export type CoordinatesOptions = {
     x: number;
     y: number;

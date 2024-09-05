@@ -1,6 +1,6 @@
-import { asyncForEach } from "./deps.ts";
-import { measureLayout } from "./layouter.ts";
-import { isColContainerWithLayout, isRowContainerWithLayout, } from "./types.ts";
+import { asyncForEach } from "./deps";
+import { measureLayout } from "./layouter";
+import { isColContainerWithLayout, isRowContainerWithLayout, } from "./types";
 export async function measureAndRenderLayout(renderingContext, root, rpd, gapX, gapY, itemMeasurer, itemRenderer) {
     const rootWithLayout = await measureLayout(renderingContext, root, rpd, gapX, gapY, itemMeasurer);
     await renderLayout(renderingContext, rootWithLayout, itemRenderer);

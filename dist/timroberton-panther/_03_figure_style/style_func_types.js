@@ -1,4 +1,4 @@
-import { getColor } from "./deps.ts";
+import { getColor } from "./deps";
 export function getStyleFuncString(val) {
     if (typeof val !== "function") {
         const color = getColor(val);

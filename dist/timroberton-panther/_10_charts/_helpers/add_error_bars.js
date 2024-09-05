@@ -1,4 +1,4 @@
-import { getColor, } from "../deps.ts";
+import { getColor, } from "../deps";
 export function addErrorBars(ctx, r, s) {
     ctx.lineWidth = s.axisStrokeWidth;
     ctx.strokeStyle = getColor(r.color);

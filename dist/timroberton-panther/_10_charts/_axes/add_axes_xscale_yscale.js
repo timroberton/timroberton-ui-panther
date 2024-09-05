@@ -1,6 +1,6 @@
-import { RectCoordsDims, avg, measureText, measureVerticalText, writeText, writeVerticalText, } from "../deps.ts";
-import { getGoodAxisTickValuesFromMaxValue } from "./get_good_axis_tick_values.ts";
-import { getDataLabelDimensionsSeries, getMaxValuesFromSeries, getXScaleAxisTickLabelDimensions, getYScaleAxisTickLabelDimensions, } from "./utils.ts";
+import { RectCoordsDims, avg, measureText, measureVerticalText, writeText, writeVerticalText, } from "../deps";
+import { getGoodAxisTickValuesFromMaxValue } from "./get_good_axis_tick_values";
+import { getDataLabelDimensionsSeries, getMaxValuesFromSeries, getXScaleAxisTickLabelDimensions, getYScaleAxisTickLabelDimensions, } from "./utils";
 export function addAxesXScaleYScale(ctx, data, rpd, s) {
     const { x, y, w, h } = rpd.asObject();
     const bottomY = y + h;

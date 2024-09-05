@@ -1,5 +1,5 @@
-import { TIM_FONT_SETS } from "./tim_fonts.ts";
-import { isFontKeyAsKey, } from "./types.ts";
+import { TIM_FONT_SETS } from "./tim_fonts";
+import { isFontKeyAsKey, } from "./types";
 const _KEY_FONTS = new Map([
     ["main400", TIM_FONT_SETS.RobotoCondensed.main400],
     ["main700", TIM_FONT_SETS.RobotoCondensed.main700],

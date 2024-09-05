@@ -1,6 +1,6 @@
-import { type Columns, type EdgeCoordMap, type NodeCoordMap, type NodeCoords, type TileCoordMap } from "./types.ts";
-import type { Edge, Node, Tile } from "./types_incoming.ts";
-import type { PositionStyle } from "./types_style.ts";
+import { type Columns, type EdgeCoordMap, type NodeCoordMap, type NodeCoords, type TileCoordMap } from "./types";
+import type { Edge, Node, Tile } from "./types_incoming";
+import type { PositionStyle } from "./types_style";
 export declare function createNodeCoordMap(nodes: Node[]): NodeCoordMap;
 export declare function newNodeCoords(w: number, h: number, isConnecting: boolean, layer: number, endFrIfConnecting: string, endToIfConnecting: string): NodeCoords;
 export declare function createEdgeCoordMap(edges: Edge[]): EdgeCoordMap;

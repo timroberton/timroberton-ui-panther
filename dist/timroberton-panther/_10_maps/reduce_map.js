@@ -1,4 +1,4 @@
-import { getPixelVals } from "./get_pixel_vals.ts";
+import { getPixelVals } from "./get_pixel_vals";
 export function reduceMap(d, popAccumulator, initialObj) {
     const resultsObj = structuredClone(initialObj);
     let iPix = -1;

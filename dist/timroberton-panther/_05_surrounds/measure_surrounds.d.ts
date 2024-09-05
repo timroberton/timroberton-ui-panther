@@ -1,4 +1,4 @@
-import { type CustomFigureStyle, type LegendItem, type MeasuredLegend, type MeasuredText, type MergedSurroundsStyle, type RectCoordsDims } from "./deps.ts";
+import { type CustomFigureStyle, type LegendItem, type MeasuredLegend, type MeasuredText, type MergedSurroundsStyle, type RectCoordsDims } from "./deps";
 export type MeasuredSurrounds = {
     caption?: {
         rcd: RectCoordsDims;

@@ -1,2 +1,2 @@
-export { isStringArray } from "../_00_utils/mod.ts";
-export { isFigure } from "../_11_figures/mod.ts";
+export { isStringArray } from "../_00_utils/mod";
+export { isFigure } from "../_11_figures/mod";

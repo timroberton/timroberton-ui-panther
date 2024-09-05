@@ -1,5 +1,5 @@
-import type { ColGroupExpanded, Series, TimChartDataColRowTransformed } from "../_types/mod.ts";
-import { type MeasuredText, type MergedChartStyle, type PointEstimateBounds } from "../deps.ts";
+import type { ColGroupExpanded, Series, TimChartDataColRowTransformed } from "../_types/mod";
+import { type MeasuredText, type MergedChartStyle, type PointEstimateBounds } from "../deps";
 export declare function getMaxValueFromAoA(aoa: PointEstimateBounds[][], stacked: boolean): number;
 export declare function getMaxValuesFromSeries(series: Series[]): {
     xMaxValue: number;

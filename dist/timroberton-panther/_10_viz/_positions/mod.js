@@ -1,2 +1,2 @@
-export { getPositionsSimple } from "./get_positions.ts";
-export * from "./types_incoming.ts";
+export { getPositionsSimple } from "./get_positions";
+export * from "./types_incoming";

@@ -1,12 +1,12 @@
-import { getChartDataColRowTransformed } from "./_helpers/get_chart_data_colrow_transformed.ts";
-import { getChartDataXYTransformed } from "./_helpers/get_chart_data_xy_transformed.ts";
-import { getLegendItemsColRow, getLegendItemsSankey, getLegendItemsXY, } from "./_helpers/get_legend_items.ts";
-import { getMergedPaletteColorsColRow, getMergedPaletteColorsSankey, getMergedPaletteColorsXY, getMergedPalettePointStylesColRow, getMergedPalettePointStylesXY, } from "./_style/mod.ts";
-import { CustomFigureStyle, addSurrounds, measureSurrounds, } from "./deps.ts";
-import { renderChartMainContentBar } from "./render_chart_content_bar.ts";
-import { renderChartMainContentPoint } from "./render_chart_content_point.ts";
-import { renderChartMainContentSankey } from "./render_chart_content_sankey.ts";
-import { renderChartMainContentScatter } from "./render_chart_content_scatter.ts";
+import { getChartDataColRowTransformed } from "./_helpers/get_chart_data_colrow_transformed";
+import { getChartDataXYTransformed } from "./_helpers/get_chart_data_xy_transformed";
+import { getLegendItemsColRow, getLegendItemsSankey, getLegendItemsXY, } from "./_helpers/get_legend_items";
+import { getMergedPaletteColorsColRow, getMergedPaletteColorsSankey, getMergedPaletteColorsXY, getMergedPalettePointStylesColRow, getMergedPalettePointStylesXY, } from "./_style/mod";
+import { CustomFigureStyle, addSurrounds, measureSurrounds, } from "./deps";
+import { renderChartMainContentBar } from "./render_chart_content_bar";
+import { renderChartMainContentPoint } from "./render_chart_content_point";
+import { renderChartMainContentSankey } from "./render_chart_content_sankey";
+import { renderChartMainContentScatter } from "./render_chart_content_scatter";
 export function renderChart(ctx, inputs, rcd, responsiveScale) {
     const cs = new CustomFigureStyle(inputs.chartStyle, responsiveScale);
     const s = cs.getMergedChartStyle();

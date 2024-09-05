@@ -1,4 +1,4 @@
-import { measureText, measureVerticalText, } from "../deps.ts";
+import { measureText, measureVerticalText, } from "../deps";
 export function getMaxValueFromAoA(aoa, stacked) {
     if (stacked) {
         if (aoa.length === 0) {

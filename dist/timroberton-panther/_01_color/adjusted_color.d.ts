@@ -1,4 +1,4 @@
-import type { ColorKeyOrString } from "./types.ts";
+import type { ColorKeyOrString } from "./types";
 export type ColorAdjustmentStrategy = ColorAdjustmentStrategyOpacity | ColorAdjustmentStrategyBrighten | ColorAdjustmentStrategyDarken | ColorKeyOrString;
 type ColorAdjustmentStrategyOpacity = {
     opacity: number;

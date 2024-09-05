@@ -1,4 +1,4 @@
-import type { VERTICAL_SPACING, EDGE_FORMAT } from "./types_style.ts";
+import type { VERTICAL_SPACING, EDGE_FORMAT } from "./types_style";
 export interface TimVizData {
     nodes: Node[];
     edges: Edge[];

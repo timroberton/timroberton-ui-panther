@@ -1,5 +1,5 @@
-import { getColor } from "./deps.ts";
-import { getFont } from "./key_fonts.ts";
+import { getColor } from "./deps";
+import { getFont } from "./key_fonts";
 export function getAdjustedText(cText, s) {
     return {
         font: getFont(s?.font ?? cText.font),

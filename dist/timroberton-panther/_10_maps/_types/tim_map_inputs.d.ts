@@ -1,4 +1,4 @@
-import type { TimMapStyleOptions } from "../_style/mod.ts";
+import type { TimMapStyleOptions } from "../_style/mod";
 export type TimMapInputs<FacValue, Adm1Value, Adm2Value> = {
     mapType: "map";
     mapData: TimMapData<FacValue, Adm1Value, Adm2Value>;

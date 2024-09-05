@@ -1,4 +1,4 @@
-import type { ColorKeyOrString, PaddingOptions, RectCoordsDims } from "./deps.ts";
+import type { ColorKeyOrString, PaddingOptions, RectCoordsDims } from "./deps";
 export type MeasurableItem<U> = U & {
     height?: number;
     stretch?: boolean;

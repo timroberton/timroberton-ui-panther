@@ -1,4 +1,4 @@
-import { type ColorKeyOrString, type LayoutStyleOptions, type TextAdjustmentOptions, type TimFigureInputs } from "./deps.ts";
+import { type ColorKeyOrString, type LayoutStyleOptions, type TextAdjustmentOptions, type TimFigureInputs } from "./deps";
 export type ADTItem = ADTParagraph | ADTHeading | ADTBullets | ADTQuote | ADTRawImage | ADTFigure;
 export type ADTItemType = "paragraph" | "heading" | "bullets" | "quote" | "rawImage" | "figure" | "table";
 export type ADTParagraph = ADTParagraphObjectPAsString | ADTParagraphObjectPAsArray | string | string[];

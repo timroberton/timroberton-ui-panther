@@ -1,7 +1,7 @@
-import { CustomFigureStyle, addSurrounds, assert, measureSurrounds, renderChart, renderMapBoundedDims, renderViz, } from "./deps.ts";
-import { renderMultiContent } from "./render_figure_multicontent.ts";
-import { renderRawImage } from "./render_raw_image_for_figure.ts";
-import { isChart, isMap, isMultiContent, isRawImage, isViz, } from "./types.ts";
+import { CustomFigureStyle, addSurrounds, assert, measureSurrounds, renderChart, renderMapBoundedDims, renderViz, } from "./deps";
+import { renderMultiContent } from "./render_figure_multicontent";
+import { renderRawImage } from "./render_raw_image_for_figure";
+import { isChart, isMap, isMultiContent, isRawImage, isViz, } from "./types";
 export function renderFigure(ctx, inputs, rcd, responsiveScale, canvasCreator) {
     if (isChart(inputs)) {
         renderChart(ctx, inputs, rcd);

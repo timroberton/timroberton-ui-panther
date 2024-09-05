@@ -1,4 +1,4 @@
-import { getColor } from "./deps.ts";
+import { getColor } from "./deps";
 export const _POINT_STYLES = [
     "circle",
     "crossRot",

@@ -1,4 +1,4 @@
-import type { Csv, CsvOptions, DataLabelPositionOffset, LegendItem, PointEstimateBounds } from "../deps.ts";
+import type { Csv, CsvOptions, DataLabelPositionOffset, LegendItem, PointEstimateBounds } from "../deps";
 export type TimChartDataXY = {
     csv: Csv<number | string> | CsvOptions<number | string>;
     xColNumber: number;

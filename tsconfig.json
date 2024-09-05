@@ -8,7 +8,7 @@
     "jsxImportSource": "solid-js",
     "declaration": true,
     "outDir": "dist",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
   "include": ["src"],
   "exclude": [

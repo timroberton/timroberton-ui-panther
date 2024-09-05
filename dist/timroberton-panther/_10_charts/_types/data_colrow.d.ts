@@ -1,4 +1,4 @@
-import type { Csv, CsvOptions, LegendItem, PointEstimateBounds } from "../deps.ts";
+import type { Csv, CsvOptions, LegendItem, PointEstimateBounds } from "../deps";
 export type TimChartDataColRow = {
     csv: Csv<number | string> | CsvOptions<number | string>;
     colNumbersOrHeadersToTake?: number[] | string[];

@@ -1,4 +1,4 @@
-import type { ChartHeightInfo, CustomFigureStyleOptions, LegendItem, TimChartInputs, TimMapInputs, TimVizInputs } from "./deps.ts";
+import type { ChartHeightInfo, CustomFigureStyleOptions, LegendItem, TimChartInputs, TimMapInputs, TimVizInputs } from "./deps";
 export type TimFigureInputs = TimChartInputs | TimVizInputs | TimMapInputs<unknown, unknown, unknown> | TimRawImageInputs | TimFigureMultiContentInputs;
 export type TimFigureMultiContentInputs = {
     figureType: "multi";

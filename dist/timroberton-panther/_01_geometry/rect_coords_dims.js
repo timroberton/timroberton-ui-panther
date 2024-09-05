@@ -1,4 +1,4 @@
-import { Coordinates } from "./coordinates.ts";
+import { Coordinates } from "./coordinates";
 export class RectCoordsDims {
     _x;
     _y;

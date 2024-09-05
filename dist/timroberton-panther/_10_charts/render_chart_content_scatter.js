@@ -1,6 +1,6 @@
-import { addAxesXScaleYScale } from "./_axes/add_axes_xscale_yscale.ts";
-import { addPointWithDataLabel } from "./_helpers/add_point_with_data_label.ts";
-import { Coordinates, createArray, } from "./deps.ts";
+import { addAxesXScaleYScale } from "./_axes/add_axes_xscale_yscale";
+import { addPointWithDataLabel } from "./_helpers/add_point_with_data_label";
+import { Coordinates, createArray, } from "./deps";
 export function renderChartMainContentScatter(ctx, data, rpd, s, paletteColors, palettePointStyles) {
     const { xMax, yMax, xMin, yMin, chartArea, dataLabelDimensions, xAxisTickValues, } = addAxesXScaleYScale(ctx, data, rpd, s);
     data.series.forEach((ser, i_ser) => {

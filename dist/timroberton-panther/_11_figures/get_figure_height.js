@@ -1,6 +1,6 @@
-import { CustomFigureStyle, getChartHeight, getSurroundsHeight, } from "./deps.ts";
-import { getFigureHeightMultiContent } from "./get_figure_height_multicontent.ts";
-import { isChart, isMultiContent, } from "./types.ts";
+import { CustomFigureStyle, getChartHeight, getSurroundsHeight, } from "./deps";
+import { getFigureHeightMultiContent } from "./get_figure_height_multicontent";
+import { isChart, isMultiContent, } from "./types";
 export function getFigureHeight(ctx, inputs, width, responsiveScale, canvasCreator) {
     if (isChart(inputs)) {
         return getChartHeight(ctx, inputs, width, responsiveScale);

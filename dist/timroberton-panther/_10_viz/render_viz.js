@@ -1,5 +1,5 @@
-import { getPositionsSimple, } from "./_positions/mod.ts";
-import { assertNotUndefined } from "./deps.ts";
+import { getPositionsSimple, } from "./_positions/mod";
+import { assertNotUndefined } from "./deps";
 export function renderViz(ctx, inputs, rpd) {
     const positionInfo = getPositionsSimple(inputs.vizData, inputs.vizStyle);
     inputs.vizData.tiles.forEach((tile) => {

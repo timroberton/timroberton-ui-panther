@@ -1,4 +1,4 @@
-import { getAdjustedColor } from "../deps.ts";
+import { getAdjustedColor } from "../deps";
 export function addBarOutline(ctx, outlineColInfo, s) {
     if (outlineColInfo.length === 0) {
         return;

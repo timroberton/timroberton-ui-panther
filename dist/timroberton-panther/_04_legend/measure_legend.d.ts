@@ -1,5 +1,5 @@
-import { Dimensions, type MeasuredText, type MergedLegendStyle } from "./deps.ts";
-import type { LegendItem } from "./types.ts";
+import { Dimensions, type MeasuredText, type MergedLegendStyle } from "./deps";
+import type { LegendItem } from "./types";
 export type MeasuredLegend = {
     dimensions: Dimensions;
     groups: {

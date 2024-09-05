@@ -1,1 +1,1 @@
-export { getColor } from "../_01_color/mod.ts";
+export { getColor } from "../_01_color/mod";

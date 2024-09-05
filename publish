@@ -11,6 +11,9 @@ npm i
 # Compile with tsc
 tsc
 
+# Clean extensions in dist folder
+find ./dist -type f -exec sed -i '' -e '/from \"/ s/.ts\";/\";/g' {} \;
+
 # Commit to github
 today=`date +%Y_%m_%d_%H_%M_%S`
 git add . && \

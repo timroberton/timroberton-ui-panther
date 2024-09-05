@@ -1,4 +1,4 @@
-import { addPoint, getAdjustedColor, getColor, writeText, } from "./deps.ts";
+import { addPoint, getAdjustedColor, getColor, writeText, } from "./deps";
 export function addLegend(ctx, coords, mLegend) {
     let currentX = coords.x();
     let currentY = coords.y();

@@ -1,3 +1,3 @@
-export { addLegend } from "./add_legend.ts";
-export { measureLegend, type MeasuredLegend } from "./measure_legend.ts";
-export type { LegendItem } from "./types.ts";
+export { addLegend } from "./add_legend";
+export { measureLegend, type MeasuredLegend } from "./measure_legend";
+export type { LegendItem } from "./types";

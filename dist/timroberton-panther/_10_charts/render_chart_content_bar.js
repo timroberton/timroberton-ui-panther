@@ -1,9 +1,9 @@
-import { addAxesXScaleYText } from "./_axes/add_axes_xscale_ytext.ts";
-import { addAxesXTextYScale } from "./_axes/add_axes_xtext_yscale.ts";
-import { addBarOutline } from "./_helpers/add_bar_outline.ts";
-import { addCascadeArrow } from "./_helpers/add_cascade_arrows.ts";
-import { addErrorBars } from "./_helpers/add_error_bars.ts";
-import { divideOrZero, getAdjustedColor, writeText, } from "./deps.ts";
+import { addAxesXScaleYText } from "./_axes/add_axes_xscale_ytext";
+import { addAxesXTextYScale } from "./_axes/add_axes_xtext_yscale";
+import { addBarOutline } from "./_helpers/add_bar_outline";
+import { addCascadeArrow } from "./_helpers/add_cascade_arrows";
+import { addErrorBars } from "./_helpers/add_error_bars";
+import { divideOrZero, getAdjustedColor, writeText, } from "./deps";
 export function renderChartMainContentBar(ctx, data, rpd, s, paletteColors) {
     //////////////////////////////////////////////////////////////////////////////////////////////
     //  __    __                      __                                  __                __  //

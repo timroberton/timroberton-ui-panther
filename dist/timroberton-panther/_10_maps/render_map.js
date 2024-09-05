@@ -1,8 +1,8 @@
-import { getMapStyle, getStyleValOrFuncValTwoArgs, } from "./_style/mod.ts";
-import { Coordinates, Dimensions, Padding, addPoint, assertNotUndefined, getAdjustedColor, getColor, } from "./deps.ts";
-import { getPixelVals } from "./get_pixel_vals.ts";
-import { getPopMapAsImageData } from "./get_pop_map_as_image_data.ts";
-import { validatePopMapData } from "./validate_pop_map_data.ts";
+import { getMapStyle, getStyleValOrFuncValTwoArgs, } from "./_style/mod";
+import { Coordinates, Dimensions, Padding, addPoint, assertNotUndefined, getAdjustedColor, getColor, } from "./deps";
+import { getPixelVals } from "./get_pixel_vals";
+import { getPopMapAsImageData } from "./get_pop_map_as_image_data";
+import { validatePopMapData } from "./validate_pop_map_data";
 export function renderMapBoundedDims(ctx, inputs, rcd, canvasCreator) {
     assertNotUndefined(canvasCreator, "To render maps, need a canvas creator");
     const d = inputs.mapData;

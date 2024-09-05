@@ -1,4 +1,4 @@
-import { type ColorKeyOrString, type MeasuredText, type MergedChartStyle, type PointStyle } from "../deps.ts";
+import { type ColorKeyOrString, type MeasuredText, type MergedChartStyle, type PointStyle } from "../deps";
 export type RenderablePointWithDataLabel = {
     x: number;
     y: number;

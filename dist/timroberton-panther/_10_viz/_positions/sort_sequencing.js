@@ -1,4 +1,4 @@
-import { sumWith } from "../deps.ts";
+import { sumWith } from "../deps";
 export function sortSequencing(nodes, columns, nodeCoordMap, s) {
     const initialSequenceWeights = nodes.reduce((map, node) => {
         if (node.initialSequenceWeight === undefined ||

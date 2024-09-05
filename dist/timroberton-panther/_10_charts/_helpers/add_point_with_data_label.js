@@ -1,4 +1,4 @@
-import { addPoint, getAdjustedColor, writeText, } from "../deps.ts";
+import { addPoint, getAdjustedColor, writeText, } from "../deps";
 export function addPointWithDataLabel(ctx, r, s) {
     addPoint(ctx, r.pointStyle, r.x, r.y, s.pointRadius, r.color, s.pointStrokeWidth, getAdjustedColor(r.color, s.pointInnerColorStrategy));
     if (r.dataLabel) {

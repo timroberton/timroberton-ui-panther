@@ -1,4 +1,4 @@
-import { CustomFigureStyle, LegendItem } from "./deps.ts";
+import { CustomFigureStyle, LegendItem } from "./deps";
 export type SurroundsHeightInfo = {
     contentW: number;
     nonContentH: number;

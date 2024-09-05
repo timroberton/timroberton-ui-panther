@@ -1,4 +1,4 @@
-import { _POINT_STYLES, toPct1, } from "./deps.ts";
+import { _POINT_STYLES, toPct1, } from "./deps";
 const _DS = {
     scale: 1,
     stacked: "not-stacked",

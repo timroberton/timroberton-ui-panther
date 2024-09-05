@@ -1,4 +1,4 @@
-import type { ColorKeyOrString, CoordsOffset, PaddingOptions } from "./deps.ts";
+import type { ColorKeyOrString, CoordsOffset, PaddingOptions } from "./deps";
 export type PaletteLogic = "single" | "auto-by-row" | "auto-by-col" | "specific-by-row" | "specific-by-col" | "func";
 export type LegendItemsSource = "default" | "only-legend-items" | "only-data" | "both-legend-items-first" | "both-data-first";
 export type LegendPosition = "bottom-left" | "bottom-center" | "bottom-right" | "right-top" | "right-center" | "right-bottom" | "none";

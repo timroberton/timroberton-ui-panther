@@ -1,5 +1,5 @@
-import { assertNotUndefined } from "./deps.ts";
-import { getPixelVals } from "./get_pixel_vals.ts";
+import { assertNotUndefined } from "./deps";
+import { getPixelVals } from "./get_pixel_vals";
 export function reduceFacilities(d, facAccumulator, initialObj) {
     assertNotUndefined(d.facs, "Must have facility data for reduceFacilities");
     const resultsObj = structuredClone(initialObj);

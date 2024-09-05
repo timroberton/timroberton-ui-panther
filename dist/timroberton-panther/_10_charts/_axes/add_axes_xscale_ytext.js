@@ -1,8 +1,8 @@
-import { getColHeight } from "../_helpers/get_col_height.ts";
-import { avg, measureText, measureVerticalText, writeText, writeVerticalText, } from "../deps.ts";
-import { getColGroupsExpandedFromDataColRow } from "./get_col_groups_expanded_from_data_colrow.ts";
-import { getGoodAxisTickValuesFromMaxValue } from "./get_good_axis_tick_values.ts";
-import { getColGroupLabelDimensions, getDataLabelDimensions, getDataLabelMaxWidthAndHeight, getMaxValueFromAoA, getVerticalColGroupLabelDimensions, getXScaleAxisTickLabelDimensions, getYTextAxisTickLabelDimensions, } from "./utils.ts";
+import { getColHeight } from "../_helpers/get_col_height";
+import { avg, measureText, measureVerticalText, writeText, writeVerticalText, } from "../deps";
+import { getColGroupsExpandedFromDataColRow } from "./get_col_groups_expanded_from_data_colrow";
+import { getGoodAxisTickValuesFromMaxValue } from "./get_good_axis_tick_values";
+import { getColGroupLabelDimensions, getDataLabelDimensions, getDataLabelMaxWidthAndHeight, getMaxValueFromAoA, getVerticalColGroupLabelDimensions, getXScaleAxisTickLabelDimensions, getYTextAxisTickLabelDimensions, } from "./utils";
 export function addAxesXScaleYText(ctx, data, rpd, s, chartType, yAxisTicks) {
     const { x, y, w, h } = rpd.asObject();
     const { colGroups, showColGroupLabelsAndBracket } = getColGroupsExpandedFromDataColRow(data);

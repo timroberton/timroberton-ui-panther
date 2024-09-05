@@ -1,4 +1,4 @@
-import type { ItemOrContainerForLayout } from "./types.ts";
+import type { ItemOrContainerForLayout } from "./types";
 type ColWidthInfo = {
     w: number;
     span: number;

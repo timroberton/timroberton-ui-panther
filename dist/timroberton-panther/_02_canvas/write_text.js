@@ -1,4 +1,4 @@
-import { setCtxFont } from "./set_ctx_font.ts";
+import { setCtxFont } from "./set_ctx_font";
 export function writeText(ctx, mText, x, y, align) {
     setCtxFont(ctx, mText.ti, align);
     mText.lines.forEach((line) => {

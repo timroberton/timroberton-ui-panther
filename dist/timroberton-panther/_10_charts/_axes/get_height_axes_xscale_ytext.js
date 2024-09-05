@@ -1,7 +1,7 @@
-import { measureText, } from "../deps.ts";
-import { getColGroupsExpandedFromDataColRow } from "./get_col_groups_expanded_from_data_colrow.ts";
-import { getGoodAxisTickValuesFromMaxValue } from "./get_good_axis_tick_values.ts";
-import { getMaxValueFromAoA, getXScaleAxisTickLabelDimensions, } from "./utils.ts";
+import { measureText, } from "../deps";
+import { getColGroupsExpandedFromDataColRow } from "./get_col_groups_expanded_from_data_colrow";
+import { getGoodAxisTickValuesFromMaxValue } from "./get_good_axis_tick_values";
+import { getMaxValueFromAoA, getXScaleAxisTickLabelDimensions, } from "./utils";
 export function getHeightAxesXScaleYText(ctx, data, w, s) {
     const { colGroups } = getColGroupsExpandedFromDataColRow(data);
     ///////////////////////////////////////////////////////////////////////////////////

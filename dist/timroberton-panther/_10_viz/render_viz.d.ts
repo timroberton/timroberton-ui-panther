@@ -1,5 +1,5 @@
-import { type CustomPositionStyle, type TimVizData } from "./_positions/mod.ts";
-import { type RectCoordsDims } from "./deps.ts";
+import { type CustomPositionStyle, type TimVizData } from "./_positions/mod";
+import { type RectCoordsDims } from "./deps";
 export type TimVizInputs = {
     vizType: "viz";
     vizData: TimVizData;

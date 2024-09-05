@@ -1,4 +1,4 @@
-import type { PointEstimateBounds } from "./types.ts";
+import type { PointEstimateBounds } from "./types";
 export type CsvOptions<T> = {
     colHeaders?: "none" | string[];
     rowHeaders?: "none" | string[];

@@ -1,6 +1,6 @@
-import { getHeightAxesXScaleYText } from "./_axes/get_height_axes_xscale_ytext.ts";
-import { getColHeight } from "./_helpers/get_col_height.ts";
-import { sum } from "./deps.ts";
+import { getHeightAxesXScaleYText } from "./_axes/get_height_axes_xscale_ytext";
+import { getColHeight } from "./_helpers/get_col_height";
+import { sum } from "./deps";
 export function getChartHeightContentPoint(ctx, data, w, s) {
     if (s.horizontal === true) {
         const { nonContentH, colGroups } = getHeightAxesXScaleYText(ctx, data, w, s);

@@ -1,8 +1,8 @@
-import { addAxesXScaleYText } from "./_axes/add_axes_xscale_ytext.ts";
-import { addAxesXTextYScale } from "./_axes/add_axes_xtext_yscale.ts";
-import { addErrorBars } from "./_helpers/add_error_bars.ts";
-import { addPointWithDataLabel, } from "./_helpers/add_point_with_data_label.ts";
-import { createArray, getAdjustedColor, } from "./deps.ts";
+import { addAxesXScaleYText } from "./_axes/add_axes_xscale_ytext";
+import { addAxesXTextYScale } from "./_axes/add_axes_xtext_yscale";
+import { addErrorBars } from "./_helpers/add_error_bars";
+import { addPointWithDataLabel, } from "./_helpers/add_point_with_data_label";
+import { createArray, getAdjustedColor, } from "./deps";
 export function renderChartMainContentPoint(ctx, data, rpd, s, paletteColors, palettePointStyles) {
     //////////////////////////////////////////////////////////////////////////////////////////////
     //  __    __                      __                                  __                __  //

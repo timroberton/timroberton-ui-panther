@@ -1,7 +1,7 @@
-import type { ColorKeyOrString, CustomFigureStyleOptions } from "../deps.ts";
-import type { TimChartDataColRow } from "./data_colrow.ts";
-import type { TimChartDataSankey } from "./data_sankey.ts";
-import type { TimChartDataXY } from "./data_xy.ts";
+import type { ColorKeyOrString, CustomFigureStyleOptions } from "../deps";
+import type { TimChartDataColRow } from "./data_colrow";
+import type { TimChartDataSankey } from "./data_sankey";
+import type { TimChartDataXY } from "./data_xy";
 export type TimChartInputs = TimChartInputsBar | TimChartInputsSankey | TimChartInputsPoint | TimChartInputsScatter;
 export type TimChartInputsBar = {
     chartType: "bar";

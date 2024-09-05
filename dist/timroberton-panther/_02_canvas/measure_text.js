@@ -1,5 +1,5 @@
-import { Dimensions } from "./deps.ts";
-import { setCtxFont } from "./set_ctx_font.ts";
+import { Dimensions } from "./deps";
+import { setCtxFont } from "./set_ctx_font";
 export function measureText(ctx, text, ti, maxWidth) {
     if (!text.trim()) {
         return {

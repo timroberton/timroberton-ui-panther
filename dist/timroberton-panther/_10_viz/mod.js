@@ -1,1 +1,1 @@
-export { renderViz } from "./render_viz.ts";
+export { renderViz } from "./render_viz";

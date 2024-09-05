@@ -1,8 +1,8 @@
-import { RectCoordsDims, measureText, renderChart, renderMapBoundedDims, renderViz, writeText, } from "./deps.ts";
-import { getFigureHeight } from "./get_figure_height.ts";
-import { getRowsOfSingleContent } from "./get_rows_of_single_content.ts";
-import { renderRawImage } from "./render_raw_image_for_figure.ts";
-import { isChart, isMap, isViz, } from "./types.ts";
+import { RectCoordsDims, measureText, renderChart, renderMapBoundedDims, renderViz, writeText, } from "./deps";
+import { getFigureHeight } from "./get_figure_height";
+import { getRowsOfSingleContent } from "./get_rows_of_single_content";
+import { renderRawImage } from "./render_raw_image_for_figure";
+import { isChart, isMap, isViz, } from "./types";
 export function renderMultiContent(ctx, inputs, rpd, s, responsiveScale, canvasCreator) {
     // Chart
     let currentX = rpd.x();

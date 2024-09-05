@@ -1,7 +1,7 @@
-import { getKeyInOutNext } from "./get_keys.ts";
-import { getSegmentDirection } from "./get_segment_direction.ts";
-import { HorizontalDirection, IncomingOutgoing, SegmentDirection, } from "./types.ts";
-import { assert } from "../deps.ts";
+import { getKeyInOutNext } from "./get_keys";
+import { getSegmentDirection } from "./get_segment_direction";
+import { HorizontalDirection, IncomingOutgoing, SegmentDirection, } from "./types";
+import { assert } from "../deps";
 export function createNodeCoordMap(nodes) {
     return nodes.reduce((map, node) => {
         map[node.id] = newNodeCoords(node.w, node.h, false, node.layer, "", "");

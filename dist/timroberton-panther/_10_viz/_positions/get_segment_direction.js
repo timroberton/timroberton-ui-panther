@@ -1,4 +1,4 @@
-import { SegmentDirection } from "./types.ts";
+import { SegmentDirection } from "./types";
 export function getSegmentDirection(frId, toId, nodeCoordMap) {
     const frNC = nodeCoordMap[frId];
     const toNC = nodeCoordMap[toId];

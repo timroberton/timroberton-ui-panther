@@ -1,4 +1,4 @@
-import { newNodeCoords } from "./create_node_coord_map.ts";
+import { newNodeCoords } from "./create_node_coord_map";
 export function addConnectingNodes(nodes, edges, nodeCoordMap, edgeCoordMap, columns) {
     edges.forEach((edge) => {
         const frNode = nodes.find((a) => a.id === edge.fr);

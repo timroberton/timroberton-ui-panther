@@ -1,5 +1,5 @@
-import type { PaddingOptions, PointStyle, ColorKeyOrString } from "../deps.ts";
-import type { ValFuncOneArg, ValFuncTwoArgs } from "./map_style_options.ts";
+import type { PaddingOptions, PointStyle, ColorKeyOrString } from "../deps";
+import type { ValFuncOneArg, ValFuncTwoArgs } from "./map_style_options";
 export declare const _DEFAULT_STYLES: {
     padding: PaddingOptions;
     backgroundColor: ColorKeyOrString;

@@ -1,5 +1,5 @@
-import type { TimChartDataXYTransformed } from "../_types/mod.ts";
-import { RectCoordsDims, type MeasuredText, type MergedChartStyle } from "../deps.ts";
+import type { TimChartDataXYTransformed } from "../_types/mod";
+import { RectCoordsDims, type MeasuredText, type MergedChartStyle } from "../deps";
 export declare function addAxesXScaleYScale(ctx: CanvasRenderingContext2D, data: TimChartDataXYTransformed, rpd: RectCoordsDims, s: MergedChartStyle): {
     chartArea: RectCoordsDims;
     xMax: number;

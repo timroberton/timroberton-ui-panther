@@ -1,6 +1,6 @@
-import { assert, assertNotUndefined, assertUnique, createArray, getSortedAlphabetical, getUnique, getValidNumberOrThrowError, sum, } from "./deps.ts";
-import { parseStrToAoA } from "./parse_csv.ts";
-import { copyHeadersNoneOrArray } from "./utils.ts";
+import { assert, assertNotUndefined, assertUnique, createArray, getSortedAlphabetical, getUnique, getValidNumberOrThrowError, sum, } from "./deps";
+import { parseStrToAoA } from "./parse_csv";
+import { copyHeadersNoneOrArray } from "./utils";
 export class Csv {
     _colHeaders;
     _rowHeaders;

@@ -1,4 +1,4 @@
-import { isUnique } from "../deps.ts";
+import { isUnique } from "../deps";
 export function getGoodAxisTickValuesFromMaxValue(maxValue, minValue, startingNTicks, formatter) {
     if (maxValue === 0 && minValue === 0) {
         return getGoodAxisTickValuesFromMaxValue(1, 0, startingNTicks, formatter);

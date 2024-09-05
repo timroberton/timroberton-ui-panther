@@ -1,10 +1,10 @@
-import { getChartDataColRowTransformed } from "./_helpers/get_chart_data_colrow_transformed.ts";
-import { getChartDataXYTransformed } from "./_helpers/get_chart_data_xy_transformed.ts";
-import { getLegendItemsColRow, getLegendItemsSankey, getLegendItemsXY, } from "./_helpers/get_legend_items.ts";
-import { getMergedPaletteColorsColRow, getMergedPaletteColorsSankey, getMergedPaletteColorsXY, getMergedPalettePointStylesColRow, getMergedPalettePointStylesXY, } from "./_style/mod.ts";
-import { CustomFigureStyle, getSurroundsHeight } from "./deps.ts";
-import { getChartHeightContentBar } from "./get_chart_height_content_bar.ts";
-import { getChartHeightContentPoint } from "./get_chart_height_content_point.ts";
+import { getChartDataColRowTransformed } from "./_helpers/get_chart_data_colrow_transformed";
+import { getChartDataXYTransformed } from "./_helpers/get_chart_data_xy_transformed";
+import { getLegendItemsColRow, getLegendItemsSankey, getLegendItemsXY, } from "./_helpers/get_legend_items";
+import { getMergedPaletteColorsColRow, getMergedPaletteColorsSankey, getMergedPaletteColorsXY, getMergedPalettePointStylesColRow, getMergedPalettePointStylesXY, } from "./_style/mod";
+import { CustomFigureStyle, getSurroundsHeight } from "./deps";
+import { getChartHeightContentBar } from "./get_chart_height_content_bar";
+import { getChartHeightContentPoint } from "./get_chart_height_content_point";
 export function getChartHeight(ctx, inputs, width, responsiveScale) {
     const cs = new CustomFigureStyle(inputs.chartStyle, responsiveScale);
     const s = cs.getMergedChartStyle();

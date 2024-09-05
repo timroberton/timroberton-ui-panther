@@ -1,4 +1,4 @@
-import { IncomingOutgoing } from "./types.ts";
+import { IncomingOutgoing } from "./types";
 export function getKeyInOutNext(incomingOutgoing, nextNodeId) {
     switch (incomingOutgoing) {
         case IncomingOutgoing.Incoming:

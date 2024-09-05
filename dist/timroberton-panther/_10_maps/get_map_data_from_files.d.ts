@@ -1,4 +1,4 @@
-import type { MapFiles, TimMapData } from "./_types/mod.ts";
+import type { MapFiles, TimMapData } from "./_types/mod";
 export declare function getMapDataFromFiles<FacValue, Adm1Value, Adm2Value>(mapFiles: MapFiles, valueFileOverrides: {
     facValuesOverride?: FacValue[];
     adm1ValuesOverride?: Adm1Value[];

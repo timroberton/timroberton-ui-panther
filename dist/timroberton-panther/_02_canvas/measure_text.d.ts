@@ -1,4 +1,4 @@
-import { Dimensions, type TextInfoUnkeyed } from "./deps.ts";
+import { Dimensions, type TextInfoUnkeyed } from "./deps";
 export type MeasuredText = {
     lines: MeasuredLine[];
     dims: Dimensions;

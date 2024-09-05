@@ -1,6 +1,6 @@
-import type { PixelVals } from "../_types/mod.ts";
-import type { PaddingOptions, PointStyle, ColorKeyOrString } from "../deps.ts";
-import type { TimMapStyleOptions, ValFuncOneArg, ValFuncTwoArgs } from "./map_style_options.ts";
+import type { PixelVals } from "../_types/mod";
+import type { PaddingOptions, PointStyle, ColorKeyOrString } from "../deps";
+import type { TimMapStyleOptions, ValFuncOneArg, ValFuncTwoArgs } from "./map_style_options";
 export type TimMapStyle<FacValue, Adm1Value, Adm2Value> = {
     padding: PaddingOptions;
     backgroundColor: ColorKeyOrString | "none";

@@ -1,4 +1,4 @@
-import { sum } from "./sum_and_avg.ts";
+import { sum } from "./sum_and_avg";
 export function normalizeToTotalOf1(arr) {
     const total = sum(arr);
     if (total === 0) {

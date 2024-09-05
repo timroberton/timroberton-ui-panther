@@ -1,5 +1,5 @@
-import { Color } from "./color_class.ts";
-import { getColor } from "./key_colors.ts";
+import { Color } from "./color_class";
+import { getColor } from "./key_colors";
 export function getAdjustedColor(color, strategy) {
     if (strategy.brighten !== undefined) {
         return new Color(getColor(color))

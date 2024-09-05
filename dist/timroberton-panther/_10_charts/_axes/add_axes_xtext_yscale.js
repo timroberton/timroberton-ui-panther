@@ -1,8 +1,8 @@
-import { getHeightOfUpperLabelBox } from "../_helpers/add_cascade_arrows.ts";
-import { measureText, measureVerticalText, writeText, writeVerticalText, } from "../deps.ts";
-import { getColGroupsExpandedFromDataColRow } from "./get_col_groups_expanded_from_data_colrow.ts";
-import { getGoodAxisTickValuesFromMaxValue } from "./get_good_axis_tick_values.ts";
-import { getColGroupLabelDimensions, getDataLabelDimensions, getDataLabelMaxWidthAndHeight, getMaxValueFromAoA, getVerticalXTextAxisTickLabelDimensions, getXTextAxisTickLabelDimensions, getYScaleAxisTickLabelDimensions, } from "./utils.ts";
+import { getHeightOfUpperLabelBox } from "../_helpers/add_cascade_arrows";
+import { measureText, measureVerticalText, writeText, writeVerticalText, } from "../deps";
+import { getColGroupsExpandedFromDataColRow } from "./get_col_groups_expanded_from_data_colrow";
+import { getGoodAxisTickValuesFromMaxValue } from "./get_good_axis_tick_values";
+import { getColGroupLabelDimensions, getDataLabelDimensions, getDataLabelMaxWidthAndHeight, getMaxValueFromAoA, getVerticalXTextAxisTickLabelDimensions, getXTextAxisTickLabelDimensions, getYScaleAxisTickLabelDimensions, } from "./utils";
 export function addAxesXTextYScale(ctx, data, rpd, s, chartType, xAxisTicks) {
     const { x, y, w, h } = rpd.asObject();
     const { colGroups, showColGroupLabelsAndBracket } = getColGroupsExpandedFromDataColRow(data);

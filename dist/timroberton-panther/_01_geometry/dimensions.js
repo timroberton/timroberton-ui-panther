@@ -1,4 +1,4 @@
-import { RectCoordsDims } from "./rect_coords_dims.ts";
+import { RectCoordsDims } from "./rect_coords_dims";
 export class Dimensions {
     _w;
     _h;

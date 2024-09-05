@@ -1,6 +1,6 @@
-import { TextInfo, type ColorAdjustmentStrategy, type ColorKeyOrString, type PaddingOptions, type PointStyle } from "./deps.ts";
-import type { CsvCellFormatterFunc, StyleFuncBoolean, StyleFuncColorKeyOrString, StyleFuncUpperLabel } from "./style_func_types.ts";
-import type { DataLabelPositionOffset, LegendItemsSource, LegendPosition, PaletteLogic } from "./types.ts";
+import { TextInfo, type ColorAdjustmentStrategy, type ColorKeyOrString, type PaddingOptions, type PointStyle } from "./deps";
+import type { CsvCellFormatterFunc, StyleFuncBoolean, StyleFuncColorKeyOrString, StyleFuncUpperLabel } from "./style_func_types";
+import type { DataLabelPositionOffset, LegendItemsSource, LegendPosition, PaletteLogic } from "./types";
 declare const _DS: {
     scale: number;
     stacked: "not-stacked" | "stacked" | "imposed";

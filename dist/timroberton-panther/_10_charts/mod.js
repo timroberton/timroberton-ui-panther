@@ -1,4 +1,4 @@
-export * from "./_types/mod.ts";
-// export { getChartPossibleHeights } from "./get_chart_possible_heights.ts";
-export { renderChart } from "./render_chart.ts";
-export { getChartHeight } from "./get_chart_height.ts";
+export * from "./_types/mod";
+// export { getChartPossibleHeights } from "./get_chart_possible_heights";
+export { renderChart } from "./render_chart";
+export { getChartHeight } from "./get_chart_height";

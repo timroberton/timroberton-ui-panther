@@ -1,4 +1,4 @@
-import { assert } from "./deps.ts";
+import { assert } from "./deps";
 export function parseStrToAoA(str) {
     // This is from here: https://stackoverflow.com/questions/1293147/how-to-parse-csv-data/14991797
     const arr = [];

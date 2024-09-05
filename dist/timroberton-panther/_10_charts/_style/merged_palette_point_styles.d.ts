@@ -1,5 +1,5 @@
-import type { TimChartDataColRowTransformed, TimChartDataSankey, TimChartDataXYTransformed } from "../_types/mod.ts";
-import type { CustomFigureStyle, PointStyle } from "../deps.ts";
+import type { TimChartDataColRowTransformed, TimChartDataSankey, TimChartDataXYTransformed } from "../_types/mod";
+import type { CustomFigureStyle, PointStyle } from "../deps";
 export type MergedPalettePointStyles = {
     paletteType: "single";
     pointStyle: PointStyle;

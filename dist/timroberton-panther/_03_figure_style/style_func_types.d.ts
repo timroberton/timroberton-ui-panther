@@ -1,5 +1,5 @@
-import type { UpperLabel } from "./types.ts";
-import { type ColorKeyOrString } from "./deps.ts";
+import type { UpperLabel } from "./types";
+import { type ColorKeyOrString } from "./deps";
 export type StyleFuncBoolean = (i_row: number, i_col: number, i_colGroup: number, i_colInColGroup: number) => boolean;
 export type StyleFuncString = (i_row: number, i_col: number, i_colGroup: number, i_colInColGroup: number) => string;
 export type StyleFuncColorKeyOrString = (i_row: number, i_col: number, i_colGroup: number, i_colInColGroup: number) => ColorKeyOrString;

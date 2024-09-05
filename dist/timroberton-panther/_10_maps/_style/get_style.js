@@ -1,4 +1,4 @@
-import { _DEFAULT_STYLES } from "./default_style.ts";
+import { _DEFAULT_STYLES } from "./default_style";
 export function getMapStyle(cs) {
     return {
         padding: cs?.padding ?? _DEFAULT_STYLES.padding,

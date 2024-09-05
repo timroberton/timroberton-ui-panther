@@ -1,4 +1,4 @@
-import { type ColorKeyOrString, type MergedChartStyle } from "../deps.ts";
+import { type ColorKeyOrString, type MergedChartStyle } from "../deps";
 export type RenderableVerticalErrorBars = {
     x: number;
     t: number;

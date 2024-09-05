@@ -1,6 +1,6 @@
-import { Color } from "./color_class.ts";
-import { assert } from "./deps.ts";
-import { TIM_COLOR_SETS } from "./tim_colors.ts";
+import { Color } from "./color_class";
+import { assert } from "./deps";
+import { TIM_COLOR_SETS } from "./tim_colors";
 const _KEY_COLORS = new Map([
     ["base100", TIM_COLOR_SETS.DarkBlue.base100],
     ["base200", TIM_COLOR_SETS.DarkBlue.base200],

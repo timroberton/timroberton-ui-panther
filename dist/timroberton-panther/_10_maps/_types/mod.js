@@ -1,3 +1,3 @@
-export * from "./map_files.ts";
-export * from "./pixel_vals.ts";
-export * from "./tim_map_inputs.ts";
+export * from "./map_files";
+export * from "./pixel_vals";
+export * from "./tim_map_inputs";

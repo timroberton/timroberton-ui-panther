@@ -1,6 +1,6 @@
-import type { Coordinates } from "./coordinates.ts";
-import type { Padding } from "./padding.ts";
-import { RectCoordsDims } from "./rect_coords_dims.ts";
+import type { Coordinates } from "./coordinates";
+import type { Padding } from "./padding";
+import { RectCoordsDims } from "./rect_coords_dims";
 export type DimensionsOptions = {
     w: number;
     h: number;

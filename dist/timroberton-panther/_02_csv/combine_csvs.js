@@ -1,5 +1,5 @@
-import { Csv } from "./csv_class.ts";
-import { assert, assertNotUndefined, createArray } from "./deps.ts";
+import { Csv } from "./csv_class";
+import { assert, assertNotUndefined, createArray } from "./deps";
 export function combineCsvsUsingSingleRows(csvArray, rowNumberOrHeader, newRowHeaders) {
     assert(newRowHeaders === undefined || newRowHeaders.length === csvArray.length, "New row headers must be same length as csv array");
     const firstCsv = csvArray.at(0);

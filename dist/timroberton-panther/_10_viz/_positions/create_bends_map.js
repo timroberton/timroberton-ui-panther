@@ -1,7 +1,7 @@
-import { getKeyInOutNext } from "./get_keys.ts";
-import { getSegmentDirection } from "./get_segment_direction.ts";
-import { IncomingOutgoing, SegmentDirection, } from "./types.ts";
-import { assert } from "../deps.ts";
+import { getKeyInOutNext } from "./get_keys";
+import { getSegmentDirection } from "./get_segment_direction";
+import { IncomingOutgoing, SegmentDirection, } from "./types";
+import { assert } from "../deps";
 export function createBendsMap(edges, columns, nodeCoordMap, edgeCoordMap, s) {
     edges.forEach((edge) => {
         const edgeCoords = edgeCoordMap[edge.id];

@@ -1,4 +1,4 @@
-import { sum, sumWith } from "../deps.ts";
+import { sum, sumWith } from "../deps";
 export function updateVerticalPositions(columns, nodeCoordMap, s) {
     const maxHColIndex = initialVerticalPositions(columns, nodeCoordMap, s);
     if (s.VERTICAL_SPACING === "automatic") {

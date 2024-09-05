@@ -1,5 +1,5 @@
-import { Csv } from "../deps.ts";
-import { withAnyLabelReplacement } from "./with_any_label_replacement.ts";
+import { Csv } from "../deps";
+import { withAnyLabelReplacement } from "./with_any_label_replacement";
 export function getChartDataColRowTransformed(d) {
     if (typeof d.csv === "string") {
         throw new Error("String CSV does not work in browser");

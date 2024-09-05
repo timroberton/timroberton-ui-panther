@@ -1,2 +1,2 @@
-export { addLegend } from "./add_legend.ts";
-export { measureLegend } from "./measure_legend.ts";
+export { addLegend } from "./add_legend";
+export { measureLegend } from "./measure_legend";

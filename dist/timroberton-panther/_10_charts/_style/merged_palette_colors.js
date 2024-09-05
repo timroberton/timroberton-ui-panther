@@ -1,4 +1,4 @@
-import { Color, getColor, } from "../deps.ts";
+import { Color, getColor, } from "../deps";
 export function getMergedPaletteColorsColRow(data, cs) {
     const s = cs.getMergedPaletteColorsStyle();
     if (s.logic === "single") {

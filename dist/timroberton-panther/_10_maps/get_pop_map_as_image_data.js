@@ -1,6 +1,6 @@
-import { getStyleValOrFuncValOneArg } from "./_style/mod.ts";
-import { getColorAsRgb } from "./deps.ts";
-import { getPixelVals } from "./get_pixel_vals.ts";
+import { getStyleValOrFuncValOneArg } from "./_style/mod";
+import { getColorAsRgb } from "./deps";
+import { getPixelVals } from "./get_pixel_vals";
 const _COLOR_CACHE = new Map();
 export function getPopMapAsImageData(d, s) {
     const imageData = new ImageData(d.pixW, d.pixH);

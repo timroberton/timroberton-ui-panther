@@ -1,5 +1,5 @@
-import { Dimensions, measureText, } from "./deps.ts";
-import { getLegendItemsInGroups } from "./utils.ts";
+import { Dimensions, measureText, } from "./deps";
+import { getLegendItemsInGroups } from "./utils";
 export function measureLegend(ctx, legendItems, s) {
     const legendItemsInGroups = getLegendItemsInGroups(s.reverseOrder ? legendItems.toReversed() : legendItems, s.maxLegendItemsInOneColumn);
     let legendW = 0;

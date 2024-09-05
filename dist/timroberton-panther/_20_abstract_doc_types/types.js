@@ -1,4 +1,4 @@
-import { isFigure, isStringArray, } from "./deps.ts";
+import { isFigure, isStringArray, } from "./deps";
 export function isADTParagraph(item) {
     return (typeof item === "string" ||
         isStringArray(item) ||

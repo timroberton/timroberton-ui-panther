@@ -1,0 +1,5 @@
+#! /bin/sh
+
+set -e
+
+find ./dist -type f -exec sed -i '' -e '/from \"/ s/.ts\";/\";/g' {} \;

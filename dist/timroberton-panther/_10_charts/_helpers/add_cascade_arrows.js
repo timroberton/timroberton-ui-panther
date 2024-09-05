@@ -1,4 +1,4 @@
-import { Padding, RectCoordsDims, getColor, measureText, writeText, } from "../deps.ts";
+import { Padding, RectCoordsDims, getColor, measureText, writeText, } from "../deps";
 export function addCascadeArrow(ctx, from, to, label, fromBarCenterX, toBarCenterX, arrowColor, upperLabel, chartAreaY, s) {
     if (to.y < from.y) {
         return;

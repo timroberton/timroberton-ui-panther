@@ -1,5 +1,5 @@
-import type { TimChartDataColRowTransformed, TimChartDataSankey, TimChartDataXYTransformed } from "../_types/mod.ts";
-import { type CustomFigureStyle, type StyleFuncString } from "../deps.ts";
+import type { TimChartDataColRowTransformed, TimChartDataSankey, TimChartDataXYTransformed } from "../_types/mod";
+import { type CustomFigureStyle, type StyleFuncString } from "../deps";
 export type MergedPaletteColors = {
     paletteType: "single";
     color: string;

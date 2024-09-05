@@ -1,7 +1,7 @@
-import { getDefaultFigureStyle, } from "./_1_default_figure_style.ts";
-import { getGlobalFigureStyle, } from "./_2_custom_figure_style_options.ts";
-import { Padding, getColor, getFont, getFontInfoId, } from "./deps.ts";
-import { getStyleFuncString } from "./style_func_types.ts";
+import { getDefaultFigureStyle, } from "./_1_default_figure_style";
+import { getGlobalFigureStyle, } from "./_2_custom_figure_style_options";
+import { Padding, getColor, getFont, getFontInfoId, } from "./deps";
+import { getStyleFuncString } from "./style_func_types";
 export class CustomFigureStyle {
     _d;
     _g;

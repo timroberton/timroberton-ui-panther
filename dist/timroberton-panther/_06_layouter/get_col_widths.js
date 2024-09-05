@@ -1,4 +1,4 @@
-import { sum } from "./deps.ts";
+import { sum } from "./deps";
 export function getColWidths(cols, width, _NUMBER_OF_COLUMNS, gapX) {
     const singleColWidth = (width - (_NUMBER_OF_COLUMNS - 1) * gapX) / _NUMBER_OF_COLUMNS;
     if (cols.some((b) => b.span !== undefined &&

@@ -1,7 +1,7 @@
-import { getKeyInOutNext } from "./get_keys.ts";
-import { getSegmentDirection } from "./get_segment_direction.ts";
-import { HorizontalDirection, IncomingOutgoing, SegmentDirection, } from "./types.ts";
-import { assert } from "../deps.ts";
+import { getKeyInOutNext } from "./get_keys";
+import { getSegmentDirection } from "./get_segment_direction";
+import { HorizontalDirection, IncomingOutgoing, SegmentDirection, } from "./types";
+import { assert } from "../deps";
 export function updateColumnsWithEdgeConnections(columns, edges, nodeCoordMap, edgeCoordMap) {
     columns.forEach((colInfo) => {
         colInfo.numberOfNonConnectingNodes = colInfo.nodeIds.filter((a) => !nodeCoordMap[a].isConnecting).length;

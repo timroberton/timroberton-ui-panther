@@ -1,3 +1,3 @@
-export { measureLayout, getProposedHeightsOfRows } from "./layouter.ts";
-export { measureAndRenderLayout, renderLayout } from "./render.ts";
-export * from "./types.ts";
+export { measureLayout, getProposedHeightsOfRows } from "./layouter";
+export { measureAndRenderLayout, renderLayout } from "./render";
+export * from "./types";

@@ -1,4 +1,4 @@
-import { type ColorKeyOrString } from "./deps.ts";
+import { type ColorKeyOrString } from "./deps";
 export declare const _POINT_STYLES: PointStyle[];
 export type PointStyle = "circle" | "crossRot" | "rectRot" | "cross" | "rect" | "triangle";
 export declare function getPointStyle(pointStyles: PointStyle[], pointIndex: number): PointStyle;

@@ -1,4 +1,4 @@
-import { RectCoordsDims, assert, assertNotUndefined, getColor, measureText, toPct1, writeText, } from "./deps.ts";
+import { RectCoordsDims, assert, assertNotUndefined, getColor, measureText, toPct1, writeText, } from "./deps";
 export function renderChartMainContentSankey(ctx, data, rpd, s) {
     const { x, y, w, h } = rpd.asObject();
     if (data.cols.length === 0) {

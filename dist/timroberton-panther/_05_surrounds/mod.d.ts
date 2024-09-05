@@ -1,3 +1,3 @@
-export { addSurrounds } from "./add_surrounds.ts";
-export { getSurroundsHeight } from "./get_surrounds_height.ts";
-export { measureSurrounds } from "./measure_surrounds.ts";
+export { addSurrounds } from "./add_surrounds";
+export { getSurroundsHeight } from "./get_surrounds_height";
+export { measureSurrounds } from "./measure_surrounds";
