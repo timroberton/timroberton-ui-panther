@@ -62,6 +62,7 @@ export declare class Csv<T> {
     }): Csv<T>;
     MUTATE_addCol(colOrColVal: T | T[], colHeader?: string): void;
     withAddedCol(colOrColVal: T | T[], colHeader?: string): Csv<T>;
+    withTotalRow(): Csv<number>;
     withTotalRowAndColumn(): Csv<number>;
     MUTATE_removeCol(colNumberOrHeader: number | string): void;
     withRemovedCol(colNumberOrHeader: number | string): Csv<T>;

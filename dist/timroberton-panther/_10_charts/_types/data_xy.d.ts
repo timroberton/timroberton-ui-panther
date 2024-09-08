@@ -1,4 +1,4 @@
-import type { Csv, CsvOptions, DataLabelPositionOffset, LegendItem, PointEstimateBounds } from "../deps";
+import type { ColorKeyOrString, Csv, CsvOptions, DataLabelPositionOffset, LegendItem, PointEstimateBounds } from "../deps";
 export type TimChartDataXY = {
     csv: Csv<number | string> | CsvOptions<number | string>;
     xColNumber: number;
@@ -9,7 +9,7 @@ export type TimChartDataXY = {
     yAxisLabel?: string;
     dataLabelPositionMap?: DataLabelPositionOffsetMap;
     labelReplacements?: Record<string, string>;
-    lineFunction?: (x: number) => number;
+    lines?: LineFunction[];
     legendItems?: LegendItem[];
 };
 export type TimChartDataXYTransformed = {
@@ -17,7 +17,7 @@ export type TimChartDataXYTransformed = {
     xAxisLabel?: string;
     yAxisLabel?: string;
     dataLabelPositionMap?: DataLabelPositionOffsetMap;
-    lineFunction?: (x: number) => number;
+    lines?: LineFunction[];
     legendItems?: LegendItem[];
 };
 export type Series = {
@@ -29,3 +29,9 @@ export type Series = {
     }[];
 };
 export type DataLabelPositionOffsetMap = Record<string, DataLabelPositionOffset>;
+export type LineFunction = {
+    color?: ColorKeyOrString;
+    strokeWidth?: number;
+    lineFunction: (x: number) => number | undefined;
+    nIncrements?: number;
+};

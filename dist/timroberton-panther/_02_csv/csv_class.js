@@ -557,6 +557,13 @@ export class Csv {
         newCsv.MUTATE_addCol(colOrColVal, colHeader);
         return newCsv;
     }
+    withTotalRow() {
+        this.assertNumberCsv();
+        const totalRow = this
+            .collapseAllAsNumbers(sum)
+            .withUpdatedRowHeaders(["Total"]);
+        return this.joinRowsWithMatchedColHeaders(totalRow);
+    }
     withTotalRowAndColumn() {
         this.assertNumberCsv();
         const totalRow = this

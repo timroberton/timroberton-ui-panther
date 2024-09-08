@@ -19,7 +19,7 @@ export function getChartDataXYTransformed(d, horizontal) {
             yAxisLabel: d.xAxisLabel,
             //
             dataLabelPositionMap: d.dataLabelPositionMap,
-            lineFunction: d.lineFunction,
+            lines: d.lines,
             legendItems: d.legendItems,
         };
     }
@@ -30,7 +30,7 @@ export function getChartDataXYTransformed(d, horizontal) {
         yAxisLabel: d.yAxisLabel,
         //
         dataLabelPositionMap: d.dataLabelPositionMap,
-        lineFunction: d.lineFunction,
+        lines: d.lines,
         legendItems: d.legendItems,
     };
 }

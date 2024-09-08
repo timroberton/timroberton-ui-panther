@@ -9,7 +9,7 @@ sh publish
 ## To install
 
 ```sh
-npm i timroberton/timroberton-ui-panther#171fc5cc727a45732dc4c8576c98803a91232147
+npm i timroberton/timroberton-ui-panther#b9321bafc65f0a7ed4da386af065e645c731eda2
 ```
 
 Copyright 2024, Tim Roberton, All rights reserved.

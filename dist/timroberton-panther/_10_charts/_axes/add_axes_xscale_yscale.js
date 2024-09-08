@@ -28,7 +28,7 @@ export function addAxesXScaleYScale(ctx, data, rpd, s) {
     const xMin = xAxisTickValues.at(0);
     const yMin = yAxisTickValues.at(0);
     let xAxisTickLabelDimensions = getXScaleAxisTickLabelDimensions(ctx, s, xAxisTickValues, Number.POSITIVE_INFINITY);
-    let yAxisTickLabelDimensions = getYScaleAxisTickLabelDimensions(ctx, s, xAxisTickValues, Number.POSITIVE_INFINITY);
+    let yAxisTickLabelDimensions = getYScaleAxisTickLabelDimensions(ctx, s, yAxisTickValues, Number.POSITIVE_INFINITY);
     const { w: xAxisTickLabelMaxValueWidth, h: xAxisTickLabelMaxValueHeight } = xAxisTickLabelDimensions.at(-1).dims.asObject();
     const { w: yAxisTickLabelMaxValueWidth, h: yAxisTickLabelMaxValueHeight } = yAxisTickLabelDimensions.at(-1).dims.asObject();
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////

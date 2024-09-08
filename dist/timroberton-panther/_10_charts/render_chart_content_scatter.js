@@ -1,6 +1,6 @@
 import { addAxesXScaleYScale } from "./_axes/add_axes_xscale_yscale";
 import { addPointWithDataLabel } from "./_helpers/add_point_with_data_label";
-import { Coordinates, createArray, } from "./deps";
+import { Coordinates, createArray, getColor, } from "./deps";
 export function renderChartMainContentScatter(ctx, data, rpd, s, paletteColors, palettePointStyles) {
     const { xMax, yMax, xMin, yMin, chartArea, dataLabelDimensions, xAxisTickValues, } = addAxesXScaleYScale(ctx, data, rpd, s);
     data.series.forEach((ser, i_ser) => {
@@ -48,24 +48,39 @@ export function renderChartMainContentScatter(ctx, data, rpd, s, paletteColors, 
             }, s);
         });
     });
-    if (data.lineFunction) {
-        const lastVal = xAxisTickValues.at(-1);
-        const increment = lastVal / 100;
-        const xVals = [0, ...createArray(100, (i) => (i + 1) * increment)];
-        ctx.strokeStyle = "rgb(239,68,68)";
-        ctx.lineWidth = s.axisStrokeWidth;
-        ctx.beginPath();
-        xVals.forEach((x, i) => {
-            const y = data.lineFunction(x);
-            const valX = chartArea.x() + (x / xMax) * chartArea.w() - s.gridStrokeWidth / 2;
-            const valY = chartArea.y() + (1 - y / yMax) * chartArea.h() + s.gridStrokeWidth / 2;
-            if (i === 0) {
-                ctx.moveTo(valX, valY);
-            }
-            else {
-                ctx.lineTo(valX, valY);
-            }
+    if (data.lines) {
+        data.lines.forEach((line) => {
+            const nIncrements = line.nIncrements ?? 100;
+            const firstVal = xAxisTickValues.at(0);
+            const lastVal = xAxisTickValues.at(-1);
+            const increment = (lastVal - firstVal) / nIncrements;
+            const xVals = createArray(nIncrements + 1, (i) => firstVal + i * increment);
+            ctx.strokeStyle = line.color ? getColor(line.color) : s.axisColor;
+            ctx.lineWidth = line.strokeWidth
+                ? line.strokeWidth * s.alreadyScaledValue
+                : s.axisStrokeWidth;
+            ctx.beginPath();
+            let isFirstPoint = true;
+            xVals.forEach((x, i) => {
+                const y = line.lineFunction(x);
+                if (y === undefined) {
+                    return;
+                }
+                const valX = chartArea.x() +
+                    ((x - xMin) / (xMax - xMin)) * chartArea.w() -
+                    s.gridStrokeWidth / 2;
+                const valY = chartArea.y() +
+                    (1 - (y - yMin) / (yMax - yMin)) * chartArea.h() +
+                    s.gridStrokeWidth / 2;
+                if (isFirstPoint) {
+                    ctx.moveTo(valX, valY);
+                    isFirstPoint = false;
+                }
+                else {
+                    ctx.lineTo(valX, valY);
+                }
+            });
+            ctx.stroke();
         });
-        ctx.stroke();
     }
 }

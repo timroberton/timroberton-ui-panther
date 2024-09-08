@@ -10,5 +10,6 @@ export * from "./generic_editor_wrapper";
 export * from "./select";
 export * from "./label_holder";
 export * from "./loading_el";
+export * from "./heading_bar";
 export * from "./state_holder_wrapper";
 export * from "../../timroberton-panther/mod";

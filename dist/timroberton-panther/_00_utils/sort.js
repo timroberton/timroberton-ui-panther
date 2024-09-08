@@ -17,3 +17,14 @@ export function sortFuncAlphabetical(a, b) {
     }
     return 0;
 }
+export function sortFuncAlphabeticalReverse(b, a) {
+    const a1 = a.toLowerCase().trim();
+    const b1 = b.toLowerCase().trim();
+    if (a1 < b1) {
+        return -1;
+    }
+    if (a1 > b1) {
+        return 1;
+    }
+    return 0;
+}

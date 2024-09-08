@@ -14,7 +14,7 @@ export function Select(p) {
         }}
       </Show>
       <div class="relative w-full">
-        <select value={p.value} onChange={(e) => p.onChange(e.currentTarget.value)} class="ui-focusable w-full appearance-none cursor-pointer rounded border border-base-300 truncate bg-base-100 py-2 pl-4 pr-10 align-middle text-base text-base-content font-400">
+        <select value={p.value} onChange={(e) => p.onChange(e.currentTarget.value)} class="ui-never-focusable w-full appearance-none cursor-pointer rounded border border-base-300 truncate bg-base-100 py-2 pl-4 pr-10 align-middle text-base text-base-content font-400">
           <For each={p.options}>
             {(opt) => {
             return <option value={opt.value}>{opt.label}</option>;

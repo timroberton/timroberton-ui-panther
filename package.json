@@ -4,8 +4,7 @@
   "main": "dist/timroberton-ui-panther/src/mod.js",
   "types": "dist/timroberton-ui-panther/src/mod.d.ts",
   "files": [
-    "dist",
-    ".npmrc"
+    "dist"
   ],
   "devDependencies": {
     "solid-js": "1.8.17",
