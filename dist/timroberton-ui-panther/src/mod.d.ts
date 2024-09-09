@@ -12,4 +12,5 @@ export * from "./label_holder";
 export * from "./loading_el";
 export * from "./heading_bar";
 export * from "./state_holder_wrapper";
+export * from "./file_saver";
 export * from "../../timroberton-panther/mod";
