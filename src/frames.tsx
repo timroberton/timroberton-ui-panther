@@ -54,19 +54,34 @@ export function FrameSide(p: FrameProps) {
 }
 
 export function FrameTop(p: FrameProps) {
-  const paneChildren = children(() => p.panelChildren);
-  const mainChildren = children(() => p.children);
+  // const paneChildren = children(() => p.panelChildren);
+  // const mainChildren = children(() => p.children);
   return (
     <div class="flex h-full w-full flex-col">
-      <Show when={paneChildren()} keyed>
+      <Show when={p.panelChildren} keyed>
         {(panel) => {
           return <div class="w-full flex-none overflow-auto">{panel}</div>;
         }}
       </Show>
-      <div class="h-0 w-full flex-1 overflow-auto">{mainChildren()}</div>
+      <div class="h-0 w-full flex-1 overflow-auto">{p.children}</div>
     </div>
   );
 }
+
+// export function FrameTop(p: FrameProps) {
+//   const paneChildren = children(() => p.panelChildren);
+//   const mainChildren = children(() => p.children);
+//   return (
+//     <div class="flex h-full w-full flex-col">
+//       <Show when={paneChildren()} keyed>
+//         {(panel) => {
+//           return <div class="w-full flex-none overflow-auto">{panel}</div>;
+//         }}
+//       </Show>
+//       <div class="h-0 w-full flex-1 overflow-auto">{mainChildren()}</div>
+//     </div>
+//   );
+// }
 
 export function FrameSideOrTop_Md(p: FrameProps) {
   const paneChildren = children(() => p.panelChildren);

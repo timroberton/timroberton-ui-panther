@@ -4,6 +4,10 @@ export type SelectOption<T extends string> = {
     label: string;
 };
 export declare function getSelectOptions(arr: string[]): SelectOption<string>[];
+export declare function getSelectOptionsFromIdLabel(arr: {
+    id: string;
+    label: string;
+}[]): SelectOption<string>[];
 type Props<T extends string> = {
     value: T | undefined;
     options: SelectOption<T>[];

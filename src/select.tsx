@@ -12,6 +12,14 @@ export function getSelectOptions(arr: string[]): SelectOption<string>[] {
   });
 }
 
+export function getSelectOptionsFromIdLabel(
+  arr: { id: string; label: string }[]
+): SelectOption<string>[] {
+  return arr.map((v) => {
+    return { value: v.id, label: v.label };
+  });
+}
+
 type Props<T extends string> = {
   value: T | undefined;
   options: SelectOption<T>[];

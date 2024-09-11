@@ -4,6 +4,11 @@ export function getSelectOptions(arr) {
         return { value: v, label: v };
     });
 }
+export function getSelectOptionsFromIdLabel(arr) {
+    return arr.map((v) => {
+        return { value: v.id, label: v.label };
+    });
+}
 export function Select(p) {
     return (<div class="w-[200px] data-[width=true]:w-full" data-width={p.fullWidth}>
       <Show when={p.label} keyed>

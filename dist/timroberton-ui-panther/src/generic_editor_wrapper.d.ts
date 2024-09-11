@@ -2,7 +2,7 @@ import { JSX } from "solid-js";
 export type EditorComponentProps<TProps, TReturn> = TProps & {
     close: (p: TReturn | undefined) => void;
 };
-type OpenEditorProps<TProps, TReturn> = {
+export type OpenEditorProps<TProps, TReturn> = {
     element: (p: EditorComponentProps<TProps, TReturn>) => JSX.Element;
     props: TProps;
 };
