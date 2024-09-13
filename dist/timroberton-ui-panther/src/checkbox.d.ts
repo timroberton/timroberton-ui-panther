@@ -10,6 +10,7 @@ type RadioGroupProps<T extends string> = {
     options: SelectOption<T>[];
     onChange: (v: string) => void;
     label?: string;
+    horizontal?: boolean;
 };
 export declare function RadioGroup<T extends string>(p: RadioGroupProps<T>): import("solid-js").JSX.Element;
 export {};

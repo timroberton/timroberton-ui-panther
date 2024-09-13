@@ -22,7 +22,7 @@ export function RadioGroup(p) {
             </legend>);
         }}
       </Show>
-      <div class="space-y-1">
+      <div class="data-[horizontal=false]:space-y-1 data-[horizontal=true]:flex data-[horizontal=true]:items-center data-[horizontal=true]:gap-3" data-horizontal={!!p.horizontal}>
         <For each={p.options}>
           {(opt) => {
             return (<div class="">

@@ -43,6 +43,7 @@ type RadioGroupProps<T extends string> = {
   options: SelectOption<T>[];
   onChange: (v: string) => void;
   label?: string;
+  horizontal?: boolean;
 };
 
 export function RadioGroup<T extends string>(p: RadioGroupProps<T>) {
@@ -57,7 +58,10 @@ export function RadioGroup<T extends string>(p: RadioGroupProps<T>) {
           );
         }}
       </Show>
-      <div class="space-y-1">
+      <div
+        class="data-[horizontal=false]:space-y-1 data-[horizontal=true]:flex data-[horizontal=true]:items-center data-[horizontal=true]:gap-3"
+        data-horizontal={!!p.horizontal}
+      >
         <For each={p.options}>
           {(opt) => {
             return (

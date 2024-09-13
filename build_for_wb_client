@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Compile with tsc
+tsc
+
+# Clean extensions in dist folder
+find ./dist -type f -exec sed -i '' -e '/from \"/ s/.ts\";/\";/g' {} \;
+
+# Commit to github
+
+rm -r /Users/timroberton/projects/_1_WEB_APPS/wb-hmis-client/src/ui
+cp -r /Users/timroberton/projects/_TIM_LIBS/timroberton-ui-panther/dist /Users/timroberton/projects/_1_WEB_APPS/wb-hmis-client/src/ui

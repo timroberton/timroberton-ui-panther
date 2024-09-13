@@ -19,8 +19,5 @@ type Props<T> = {
         link: string;
     };
 };
-export declare function StateHolderWrapperX<T>(p: {
-    tim: string;
-}): JSX.Element;
 export declare function StateHolderWrapper<T>(p: Props<T>): JSX.Element;
 export {};
