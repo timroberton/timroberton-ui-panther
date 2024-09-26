@@ -1,1 +1,5 @@
-export declare function Loading(): import("solid-js").JSX.Element;
+type Props = {
+    msg?: string;
+};
+export declare function Loading(p: Props): import("solid-js").JSX.Element;
+export {};

@@ -1,3 +1,3 @@
-export function Loading() {
-    return <div class="ui-pad h-full w-full">Loading...</div>;
+export function Loading(p) {
+    return <div class="ui-pad h-full w-full">{p.msg ?? "Loading..."}</div>;
 }

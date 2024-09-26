@@ -5,7 +5,7 @@ export function StateHolderWrapper(p) {
     return (<div class="h-full w-full">
       <Switch>
         <Match when={p.state.status === "loading"}>
-          <Loading />
+          <Loading msg={p.state.msg}/>
         </Match>
         <Match when={p.state.status === "error"}>
           <div class="ui-pad ui-space-y">

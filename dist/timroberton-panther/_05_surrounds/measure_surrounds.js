@@ -9,7 +9,7 @@ export function measureSurrounds(ctx, rcd, cs, caption, legendItems) {
     if (caption?.trim()) {
         mCaption = measureText(ctx, caption.trim(), sSurrounds.text.caption, innerRcd.w());
         captionAndCaptionGapH = mCaption.dims.h() + sSurrounds.captionGap;
-        captionRcd = mCaption.dims.asRectCoordsDims(innerRcd.topLeftCoords());
+        captionRcd = innerRcd.getAdjusted({ h: mCaption.dims.h() });
     }
     const chartAndLegendRcd = innerRcd.getAdjusted((prev) => ({
         y: prev.y() + captionAndCaptionGapH,

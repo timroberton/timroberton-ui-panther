@@ -3,7 +3,7 @@ import { Loading } from "./loading_el";
 import { Button, Link } from "./button";
 
 export type StateHolder<T> =
-  | { status: "loading" }
+  | { status: "loading"; msg?: string }
   | { status: "error"; err: string }
   | { status: "ready"; data: T };
 
@@ -26,7 +26,7 @@ export function StateHolderWrapper<T>(p: Props<T>) {
     <div class="h-full w-full">
       <Switch>
         <Match when={p.state.status === "loading"}>
-          <Loading />
+          <Loading msg={(p.state as { msg?: string }).msg} />
         </Match>
         <Match when={p.state.status === "error"}>
           <div class="ui-pad ui-space-y">

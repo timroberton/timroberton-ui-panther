@@ -1,6 +1,7 @@
 import { JSX } from "solid-js";
 export type StateHolder<T> = {
     status: "loading";
+    msg?: string;
 } | {
     status: "error";
     err: string;
