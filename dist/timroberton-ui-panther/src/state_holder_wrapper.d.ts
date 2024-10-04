@@ -1,4 +1,17 @@
 import { JSX } from "solid-js";
+export type StateHolderNoData = {
+    status: "loading";
+    msg?: string;
+} | {
+    status: "error";
+    err: string;
+} | {
+    status: "ready";
+};
+type StateHolderErrorProps = {
+    state: StateHolderNoData;
+};
+export declare function StateHolderError(p: StateHolderErrorProps): JSX.Element;
 export type StateHolder<T> = {
     status: "loading";
     msg?: string;
@@ -9,7 +22,7 @@ export type StateHolder<T> = {
     status: "ready";
     data: T;
 };
-type Props<T> = {
+type StateHolderWrapperProps<T> = {
     state: StateHolder<T>;
     children: (v: T) => JSX.Element;
     onErrorButton?: {
@@ -20,5 +33,5 @@ type Props<T> = {
         link: string;
     };
 };
-export declare function StateHolderWrapper<T>(p: Props<T>): JSX.Element;
+export declare function StateHolderWrapper<T>(p: StateHolderWrapperProps<T>): JSX.Element;
 export {};

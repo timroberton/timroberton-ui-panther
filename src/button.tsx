@@ -1,5 +1,7 @@
-import { JSX } from "solid-js";
+import { JSX, Show } from "solid-js";
 import { Intent } from "./types";
+import { Spinner } from "./loading_el";
+import { StateHolderNoData } from "./state_holder_wrapper";
 
 type ButtonProps = {
   children: JSX.Element;
@@ -10,6 +12,8 @@ type ButtonProps = {
   autofocus?: boolean;
   intent?: Intent;
   fullWidth?: boolean;
+  loading?: boolean;
+  state?: StateHolderNoData;
 };
 
 export function Button(p: ButtonProps) {
@@ -24,7 +28,17 @@ export function Button(p: ButtonProps) {
       form={p.form}
       data-width={p.fullWidth}
     >
-      {p.children}
+      <Show when={p.loading || p.state?.status === "loading"}>
+        <span class="absolute inset-0 pointer-events-none flex items-center justify-center">
+          <Spinner />
+        </span>
+      </Show>
+      <span
+        class="data-[loading=true]:invisible relative"
+        data-loading={p.loading || p.state?.status === "loading"}
+      >
+        {p.children}
+      </span>
     </button>
   );
 }
@@ -44,7 +58,7 @@ export function Link(p: LinkProps) {
       data-intent={p.intent}
       data-width={p.fullWidth}
     >
-      {p.children}
+      <span class="relative">{p.children}</span>
     </a>
   );
 }

@@ -1,4 +1,4 @@
-import { Show } from "solid-js";
+import { Accessor, Show, onMount } from "solid-js";
 import { Intent } from "./types";
 
 type Props = {
@@ -6,12 +6,18 @@ type Props = {
   onChange?: (v: string) => void;
   label?: string;
   intent?: Intent;
-  autofocus?: boolean;
+  autoFocus?: boolean;
   fullWidth?: boolean;
   type?: string;
 };
 
 export function Input(p: Props) {
+  function af(el: HTMLElement) {
+    if (p.autoFocus) {
+      setTimeout(() => el.focus());
+    }
+  }
+
   return (
     <div class="w-[200px] data-[width=true]:w-full" data-width={p.fullWidth}>
       <Show when={p.label} keyed>
@@ -27,9 +33,10 @@ export function Input(p: Props) {
         }}
       </Show>
       <input
+        ref={af}
         class="ui-focusable inline-flex w-full appearance-none rounded border border-base-300 bg-base-100 px-4 py-2 align-middle text-base text-base-content font-400"
         data-intent={p.intent}
-        autofocus={p.autofocus}
+        autofocus={p.autoFocus}
         type={p.type}
         onChange={(v) => p.onChange(v.currentTarget.value)}
         value={p.value}

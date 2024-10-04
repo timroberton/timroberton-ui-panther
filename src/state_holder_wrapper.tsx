@@ -1,13 +1,32 @@
-import { JSX, Match, Switch } from "solid-js";
+import { JSX, Match, Show, Switch } from "solid-js";
 import { Loading } from "./loading_el";
 import { Button, Link } from "./button";
+
+export type StateHolderNoData =
+  | { status: "loading"; msg?: string }
+  | { status: "error"; err: string }
+  | { status: "ready" };
+
+type StateHolderErrorProps = {
+  state: StateHolderNoData;
+};
+
+export function StateHolderError(p: StateHolderErrorProps) {
+  return (
+    <Show when={p.state.status === "error" && p.state.err} keyed>
+      {(keyedErr) => {
+        return <div class="text-danger">{keyedErr}</div>;
+      }}
+    </Show>
+  );
+}
 
 export type StateHolder<T> =
   | { status: "loading"; msg?: string }
   | { status: "error"; err: string }
   | { status: "ready"; data: T };
 
-type Props<T> = {
+type StateHolderWrapperProps<T> = {
   state: StateHolder<T>;
   children: (v: T) => JSX.Element;
   onErrorButton?:
@@ -21,7 +40,7 @@ type Props<T> = {
       };
 };
 
-export function StateHolderWrapper<T>(p: Props<T>) {
+export function StateHolderWrapper<T>(p: StateHolderWrapperProps<T>) {
   return (
     <div class="h-full w-full">
       <Switch>

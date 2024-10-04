@@ -27,9 +27,15 @@ type Props<T extends string> = {
   intent?: Intent;
   label?: string;
   fullWidth?: boolean;
+  autoFocus?: boolean;
 };
 
 export function Select<T extends string>(p: Props<T>) {
+  function af(el: HTMLElement) {
+    if (p.autoFocus) {
+      setTimeout(() => el.focus());
+    }
+  }
   return (
     <div class="w-[200px] data-[width=true]:w-full" data-width={p.fullWidth}>
       <Show when={p.label} keyed>
@@ -46,9 +52,11 @@ export function Select<T extends string>(p: Props<T>) {
       </Show>
       <div class="relative w-full">
         <select
+          ref={af}
           value={p.value}
           onChange={(e) => p.onChange(e.currentTarget.value)}
           class="ui-never-focusable w-full appearance-none cursor-pointer rounded border border-base-300 truncate bg-base-100 py-2 pl-4 pr-10 align-middle text-base text-base-content font-400"
+          autofocus={p.autoFocus}
         >
           <For each={p.options}>
             {(opt) => {

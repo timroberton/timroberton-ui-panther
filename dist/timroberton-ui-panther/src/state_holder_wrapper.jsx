@@ -1,6 +1,13 @@
-import { Match, Switch } from "solid-js";
+import { Match, Show, Switch } from "solid-js";
 import { Loading } from "./loading_el";
 import { Button, Link } from "./button";
+export function StateHolderError(p) {
+    return (<Show when={p.state.status === "error" && p.state.err} keyed>
+      {(keyedErr) => {
+            return <div class="text-danger">{keyedErr}</div>;
+        }}
+    </Show>);
+}
 export function StateHolderWrapper(p) {
     return (<div class="h-full w-full">
       <Switch>

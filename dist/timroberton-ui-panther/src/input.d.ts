@@ -4,7 +4,7 @@ type Props = {
     onChange?: (v: string) => void;
     label?: string;
     intent?: Intent;
-    autofocus?: boolean;
+    autoFocus?: boolean;
     fullWidth?: boolean;
     type?: string;
 };

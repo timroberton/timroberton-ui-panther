@@ -15,6 +15,7 @@ type Props<T extends string> = {
     intent?: Intent;
     label?: string;
     fullWidth?: boolean;
+    autoFocus?: boolean;
 };
 export declare function Select<T extends string>(p: Props<T>): import("solid-js").JSX.Element;
 export {};

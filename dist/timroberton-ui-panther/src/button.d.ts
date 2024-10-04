@@ -1,5 +1,6 @@
 import { JSX } from "solid-js";
 import { Intent } from "./types";
+import { StateHolderNoData } from "./state_holder_wrapper";
 type ButtonProps = {
     children: JSX.Element;
     onClick?: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent>;
@@ -9,6 +10,8 @@ type ButtonProps = {
     autofocus?: boolean;
     intent?: Intent;
     fullWidth?: boolean;
+    loading?: boolean;
+    state?: StateHolderNoData;
 };
 export declare function Button(p: ButtonProps): JSX.Element;
 type LinkProps = {
