@@ -1,4 +1,4 @@
-import { JSX, Match, Show, Switch, createSignal } from "solid-js";
+import { JSX, Show, createSignal } from "solid-js";
 import { Dynamic } from "solid-js/web";
 
 export type EditorComponentProps<TProps, TReturn> = TProps & {

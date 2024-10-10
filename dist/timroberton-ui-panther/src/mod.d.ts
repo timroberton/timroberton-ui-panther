@@ -1,3 +1,5 @@
+export * from "./alert";
+export { default as AlertProvider } from "./alert";
 export * from "./button";
 export * from "./chart_holder_fixed_height";
 export * from "./chart_holder_auto_height";
