@@ -1,4 +1,4 @@
-import { For, Show } from "solid-js";
+import { For, Match, Show, Switch } from "solid-js";
 export function Checkbox(p) {
     return (<div class="">
       <label class="inline-flex items-center align-top">
@@ -9,7 +9,12 @@ export function Checkbox(p) {
             <path d="M5 12l5 5l10 -10"/>
           </svg>
         </div>
-        <span class="select-none">{p.label}</span>
+        <Switch>
+          <Match when={typeof p.label === "string"}>
+            <span class="select-none">{p.label}</span>
+          </Match>
+          <Match when={true}>{p.label}</Match>
+        </Switch>
       </label>
     </div>);
 }
@@ -31,7 +36,12 @@ export function RadioGroup(p) {
                     <input checked={opt.value === p.value} type="radio" onChange={() => p.onChange(opt.value)} class="peer ui-focusable appearance-none h-5 w-5 cursor-pointer rounded-full border border-base-300 bg-base-100 text-base-content"/>
                     <div class="h-3 w-3 absolute rounded-full inset-1 pointer-events-none peer-checked:block hidden bg-base-content"/>
                   </div>
-                  <span class="select-none">{opt.label}</span>
+                  <Switch>
+                    <Match when={typeof opt.label === "string"}>
+                      <span class="select-none">{opt.label}</span>
+                    </Match>
+                    <Match when={true}>{opt.label}</Match>
+                  </Switch>
                 </label>
               </div>);
         }}

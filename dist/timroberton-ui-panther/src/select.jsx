@@ -37,5 +37,12 @@ export function Select(p) {
           <path d="M16 15l-4 4l-4 -4"/>
         </svg>
       </div>
+      <Show when={p.invalidMsg} keyed>
+        {(keyedInvalidMsg) => {
+            return (<div class="pt-1 text-xs text-danger inline-block">
+              {keyedInvalidMsg}
+            </div>);
+        }}
+      </Show>
     </div>);
 }

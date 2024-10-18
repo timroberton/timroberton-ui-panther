@@ -2,7 +2,7 @@ import { JSX } from "solid-js";
 import { Intent } from "./types";
 type OpenAlertInput = {
     title?: string;
-    text: string;
+    text: string | JSX.Element;
     intent?: Intent;
     closeButtonLabel?: string;
 };

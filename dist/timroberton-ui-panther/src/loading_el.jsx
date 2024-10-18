@@ -1,5 +1,7 @@
 export function Loading(p) {
-    return <div class="ui-pad h-full w-full">{p.msg ?? "Loading..."}</div>;
+    return (<div class="data-[no-pad=false]:ui-pad h-full w-full" data-no-pad={!!p.noPad}>
+      {p.msg ?? "Loading..."}
+    </div>);
 }
 export function Spinner() {
     return (<div class="h-full w-full flex items-center justify-center">

@@ -13,6 +13,13 @@ export function Input(p) {
             </label>);
         }}
       </Show>
-      <input ref={af} class="ui-focusable inline-flex w-full appearance-none rounded border border-base-300 bg-base-100 px-4 py-2 align-middle text-base text-base-content font-400" data-intent={p.intent} autofocus={p.autoFocus} type={p.type} onChange={(v) => p.onChange(v.currentTarget.value)} value={p.value}/>
+      <input ref={af} class="ui-focusable inline-flex w-full appearance-none rounded border border-base-300 bg-base-100 px-4 py-2 align-middle text-base text-base-content font-400" data-intent={p.intent} autofocus={p.autoFocus} type={p.type} onInput={(v) => p.onChange(v.currentTarget.value)} value={p.value}/>
+      <Show when={p.invalidMsg} keyed>
+        {(keyedInvalidMsg) => {
+            return (<div class="pt-1 text-xs text-danger inline-block">
+              {keyedInvalidMsg}
+            </div>);
+        }}
+      </Show>
     </div>);
 }

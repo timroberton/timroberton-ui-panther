@@ -32,6 +32,7 @@ type StateHolderWrapperProps<T> = {
         label: string;
         link: string;
     };
+    noPad?: boolean;
 };
 export declare function StateHolderWrapper<T>(p: StateHolderWrapperProps<T>): JSX.Element;
 export {};

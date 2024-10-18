@@ -12,10 +12,10 @@ export function StateHolderWrapper(p) {
     return (<div class="h-full w-full">
       <Switch>
         <Match when={p.state.status === "loading"}>
-          <Loading msg={p.state.msg}/>
+          <Loading msg={p.state.msg} noPad={p.noPad}/>
         </Match>
         <Match when={p.state.status === "error"}>
-          <div class="ui-pad ui-space-y">
+          <div class="data-[no-pad=false]:ui-pad ui-space-y" data-no-pad={!!p.noPad}>
             <div class="text-danger">
               Error: {p.state.err}
             </div>

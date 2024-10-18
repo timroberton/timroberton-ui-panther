@@ -7,6 +7,7 @@ type Props = {
     autoFocus?: boolean;
     fullWidth?: boolean;
     type?: string;
+    invalidMsg?: string;
 };
 export declare function Input(p: Props): import("solid-js").JSX.Element;
 export {};

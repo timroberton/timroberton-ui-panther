@@ -38,6 +38,7 @@ type StateHolderWrapperProps<T> = {
         label: string;
         link: string;
       };
+  noPad?: boolean;
 };
 
 export function StateHolderWrapper<T>(p: StateHolderWrapperProps<T>) {
@@ -45,10 +46,13 @@ export function StateHolderWrapper<T>(p: StateHolderWrapperProps<T>) {
     <div class="h-full w-full">
       <Switch>
         <Match when={p.state.status === "loading"}>
-          <Loading msg={(p.state as { msg?: string }).msg} />
+          <Loading msg={(p.state as { msg?: string }).msg} noPad={p.noPad} />
         </Match>
         <Match when={p.state.status === "error"}>
-          <div class="ui-pad ui-space-y">
+          <div
+            class="data-[no-pad=false]:ui-pad ui-space-y"
+            data-no-pad={!!p.noPad}
+          >
             <div class="text-danger">
               Error: {(p.state as { err: string }).err}
             </div>

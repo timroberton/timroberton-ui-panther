@@ -9,6 +9,7 @@ type Props = {
   autoFocus?: boolean;
   fullWidth?: boolean;
   type?: string;
+  invalidMsg?: string;
 };
 
 export function Input(p: Props) {
@@ -38,9 +39,18 @@ export function Input(p: Props) {
         data-intent={p.intent}
         autofocus={p.autoFocus}
         type={p.type}
-        onChange={(v) => p.onChange(v.currentTarget.value)}
+        onInput={(v) => p.onChange(v.currentTarget.value)}
         value={p.value}
       />
+      <Show when={p.invalidMsg} keyed>
+        {(keyedInvalidMsg) => {
+          return (
+            <div class="pt-1 text-xs text-danger inline-block">
+              {keyedInvalidMsg}
+            </div>
+          );
+        }}
+      </Show>
     </div>
   );
 }

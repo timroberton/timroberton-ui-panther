@@ -1,10 +1,10 @@
-import { For, Show } from "solid-js";
+import { For, JSX, Match, Show, Switch } from "solid-js";
 import { SelectOption } from "./select";
 
 type CheckboxProps = {
   checked: boolean;
   onChange: (checked: boolean) => void;
-  label: string;
+  label: string | JSX.Element;
 };
 
 export function Checkbox(p: CheckboxProps) {
@@ -32,7 +32,12 @@ export function Checkbox(p: CheckboxProps) {
             <path d="M5 12l5 5l10 -10" />
           </svg>
         </div>
-        <span class="select-none">{p.label}</span>
+        <Switch>
+          <Match when={typeof p.label === "string"}>
+            <span class="select-none">{p.label}</span>
+          </Match>
+          <Match when={true}>{p.label}</Match>
+        </Switch>
       </label>
     </div>
   );
@@ -42,7 +47,7 @@ type RadioGroupProps<T extends string> = {
   value: T | undefined;
   options: SelectOption<T>[];
   onChange: (v: string) => void;
-  label?: string;
+  label?: string | JSX.Element;
   horizontal?: boolean;
 };
 
@@ -76,7 +81,12 @@ export function RadioGroup<T extends string>(p: RadioGroupProps<T>) {
                     />
                     <div class="h-3 w-3 absolute rounded-full inset-1 pointer-events-none peer-checked:block hidden bg-base-content" />
                   </div>
-                  <span class="select-none">{opt.label}</span>
+                  <Switch>
+                    <Match when={typeof opt.label === "string"}>
+                      <span class="select-none">{opt.label}</span>
+                    </Match>
+                    <Match when={true}>{opt.label}</Match>
+                  </Switch>
                 </label>
               </div>
             );

@@ -10,7 +10,7 @@ import { Intent } from "./types";
 
 type OpenAlertInput = {
   title?: string;
-  text: string;
+  text: string | JSX.Element;
   intent?: Intent;
   closeButtonLabel?: string;
 };
@@ -252,7 +252,16 @@ export default function AlertProvider() {
                               </Show>
                               <Show when={keyedACPState.text} keyed>
                                 {(keyedText) => {
-                                  return <p class="">{keyedText}</p>;
+                                  return (
+                                    <Switch>
+                                      <Match
+                                        when={typeof keyedText === "string"}
+                                      >
+                                        <p class="">{keyedText}</p>
+                                      </Match>
+                                      <Match when={true}>{keyedText}</Match>
+                                    </Switch>
+                                  );
                                 }}
                               </Show>
                             </div>
