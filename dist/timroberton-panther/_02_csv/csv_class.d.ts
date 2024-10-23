@@ -104,7 +104,7 @@ export declare class Csv<T> {
     joinColsWithRowsSameOrder(otherCsv: Csv<T>): Csv<T>;
     joinColsWithMatchedRowHeaders(otherCsv: Csv<T>): Csv<T>;
     joinRowsWithMatchedColHeaders(otherCsv: Csv<T>): Csv<T>;
-    reshapeWide(colNumberOrHeaderFromWhichToCreateCols: number | string, colNumberOrHeaderFromWhichToCreateRows: number | string, colNumberOrHeaderForVals: number | string): Csv<T>;
+    reshapeWide(colNumberOrHeaderFromWhichToCreateCols: number | string, colNumberOrHeaderFromWhichToCreateRows: number | string, colNumberOrHeaderForVals: number | string, missingValue?: T): Csv<T>;
     getWithPointEstimateBounds<T extends "none" | "from-adjacent-cols" | "from-adjacent-rows" | undefined, R = T extends undefined ? Csv<T> : Csv<PointEstimateBounds>>(from: T): R;
     print(nRows?: number): void;
     write(writerFunc: (str: string) => void): void;

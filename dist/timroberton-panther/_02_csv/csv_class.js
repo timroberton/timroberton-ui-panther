@@ -1166,7 +1166,7 @@ export class Csv {
     //                                                   $$/                  //
     //                                                                        //
     ////////////////////////////////////////////////////////////////////////////
-    reshapeWide(colNumberOrHeaderFromWhichToCreateCols, colNumberOrHeaderFromWhichToCreateRows, colNumberOrHeaderForVals) {
+    reshapeWide(colNumberOrHeaderFromWhichToCreateCols, colNumberOrHeaderFromWhichToCreateRows, colNumberOrHeaderForVals, missingValue) {
         assert(this.dataType() === "string", "Must be csv data type of string");
         const colHeaderIndex = this.getColHeaderIndex(colNumberOrHeaderFromWhichToCreateCols);
         const newColHeaders = this.getColValsAsUniqueAndSortedArrayOfStrings(colNumberOrHeaderFromWhichToCreateCols);
@@ -1177,9 +1177,8 @@ export class Csv {
             return newColHeaders.map((colHeader) => {
                 const valRow = this._aoa.find((row) => row[rowHeaderIndex] === rowHeader &&
                     row[colHeaderIndex] === colHeader);
-                assertNotUndefined(valRow);
-                const val = valRow[valIndex];
-                assertNotUndefined(val);
+                const val = valRow?.[valIndex] ?? missingValue;
+                assertNotUndefined(val, "Missing value for " + rowHeader + ", " + colHeader + ", " + valIndex);
                 return val;
             });
         });
