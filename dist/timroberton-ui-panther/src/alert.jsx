@@ -79,7 +79,7 @@ export default function AlertProvider() {
               <Switch>
                 <Match when={isComponentState(keyedAlertState) && keyedAlertState} keyed>
                   {(keyedComponentState) => {
-                    return (<div class="ui-never-focusable z-50 rounded bg-base-100 shadow-lg outline-none">
+                    return (<div class="ui-never-focusable z-50 rounded bg-base-100 shadow-lg outline-none mx-12">
                         <Dynamic component={keyedComponentState.element} close={(p) => {
                             keyedComponentState.componentResolver(p);
                             setAlertState(undefined);

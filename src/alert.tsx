@@ -213,7 +213,7 @@ export default function AlertProvider() {
                 >
                   {(keyedComponentState) => {
                     return (
-                      <div class="ui-never-focusable z-50 rounded bg-base-100 shadow-lg outline-none">
+                      <div class="ui-never-focusable z-50 rounded bg-base-100 shadow-lg outline-none mx-12">
                         <Dynamic
                           component={keyedComponentState.element}
                           close={(p: unknown) => {
